@@ -1,0 +1,37 @@
+# Partition Table — 16MB flash, 双 OTA 槽 + 大容量 storage
+#
+# ESP32-S3 N16R8。这一张表是把 components/boards/partitions-no-ota.csv
+# （单 app 4MB + storage 11.5MB）改回**可 OTA**，同时尽量保住两边的余量：
+#
+#   无 OTA 版: app 4MB / storage 11.5MB          ← 2026-09-16 ~ 2026-09-19
+#   本表:      app 4MB × 2 / storage 7.875MB     ← 恢复网页升级
+#   上游 16MB: app 6MB × 2 / storage 3.875MB     ← components/boards/partitions-16m.csv
+#
+# 空间账 (16MB = 0x1000000):
+#   0x000000 - 0x008FFF  bootloader + 分区表   (32KB 保留)
+#   0x009000 - 0x018FFF  nvs        64KB       ← 与旧表同位置，所以改布局时
+#                                                  不擦 nvs 也能保住 WiFi 凭据
+#   0x019000 - 0x01AFFF  otadata    8KB        ← 启动槽记录（双槽必需）
+#   0x01B000 - 0x01BFFF  phy_init   4KB
+#   0x01C000 - 0x01FFFF  (16KB 填充，把 app 对齐到 64KB 边界)
+#   0x020000 - 0x41FFFF  ota_0      4MB        ← 当前固件 2.11MB，占用 53%
+#   0x420000 - 0x81FFFF  ota_1      4MB
+#   0x820000 - 0xFFFFFF  storage    7.875MB    ← 网页文件只占 0.22MB，余量极大
+#
+# 两个"故意没有"的东西：
+#   factory  — 没有 factory 项是合法布局（上游 partitions.csv / partitions-16m.csv
+#              同样如此）。已真机验证：全片擦除 → 只往 ota_0(0x20000) 写 app、
+#              ota_1 保持空 → 设备正常启动并跑起来（串口日志里 web server / mDNS
+#              都在），所以"otadata 为空时挑第一个有效 app 槽"成立。
+#   nvs_key  — NVS 加密没启用，留着只是占 4KB（与 partitions-no-ota.csv 一致）。
+#
+# ⚠️ 换这张表要 erase_flash 一次（ota_1/storage 的地址全变了）。nvs 段地址没动，
+#    所以只想保住 WiFi 凭据的话，可以单独重写分区表 + app + storage 而不擦 nvs。
+#
+# Name,   Type, SubType,  Offset,   Size,     Flags
+nvs,      data, nvs,      0x9000,   0x10000,
+otadata,  data, ota,      0x19000,  0x2000,
+phy_init, data, phy,      0x1B000,  0x1000,
+ota_0,    app,  ota_0,    0x20000,  0x400000,
+ota_1,    app,  ota_1,    0x420000, 0x400000,
+storage,  data, spiffs,   0x820000, 0x7E0000,

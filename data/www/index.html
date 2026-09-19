@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang='zh-CN'><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover'>
+<title>AirPlay 接收器</title>
+<meta name='theme-color' content='#0a0c0f'>
+<link rel="stylesheet" href="/base.css">
+<style>
+/* ---------- 本页专属 ---------- */
+
+/* 输入源一览：三行,每行一条灯 + 名字 + 状态。这台设备的核心事实就是
+   "哪一路在响",所以它排在音量之前。 */
+.src-row{display:flex;align-items:center;gap:11px;width:100%;min-height:52px;
+  padding:10px 12px;background:var(--well);border:1px solid var(--line);
+  border-radius:var(--r-ctl);color:var(--fg);font-family:inherit;font-size:14px;
+  text-align:left;cursor:pointer;margin-top:8px;
+  transition:border-color var(--tap),background var(--tap)}
+.grp>h2+.src-row{margin-top:0}
+.src-row:hover{border-color:var(--line-2)}
+/* AirPlay 行没有跳转目标（本地既无播控也无设置项），做成不可点的行 */
+.src-row.static{cursor:default}
+.src-row.static:hover{border-color:var(--line)}
+.src-row.live{border-color:rgba(var(--ok-rgb),.45);background:rgba(var(--ok-rgb),.08)}
+.src-row svg.ic{width:17px;height:17px;flex:none;stroke:var(--dim);fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.src-row.live svg.ic{stroke:var(--ok-tx)}
+/* AirPlay 行的两种归属态：蓝=服务就绪，琥珀=被蓝牙占走。
+   绿色 (.live) 只表示"这一路正在出声"，两者不能混用同一个类。 */
+.src-row.ready{border-color:rgba(var(--accent-rgb),.35)}
+.src-row.ready svg.ic{stroke:var(--accent)}
+.src-row.ready .st{color:var(--accent-hi)}
+.src-row.held{border-color:rgba(var(--warn-rgb),.35)}
+.src-row.held svg.ic{stroke:var(--warn)}
+.src-row.held .st{color:var(--warn)}
+.src-row .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.src-row .st{flex:none;font-size:11.5px;color:var(--muted);font-family:var(--mono);
+  letter-spacing:.3px}
+.src-row.live .st{color:var(--ok-tx)}
+
+/* 正在播放 */
+#np-empty{padding:16px 2px;color:var(--dim);font-size:13px;line-height:1.7}
+.np-t{font-size:19px;font-weight:600;line-height:1.35;letter-spacing:.2px;word-break:break-word}
+.np-m{font-size:13px;color:var(--muted);margin-top:5px;line-height:1.5;word-break:break-word}
+.np-m:empty{display:none}
+.np-clock{margin-top:10px;font-size:12px;color:var(--dim);font-family:var(--mono);
+  font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.np-clock:empty{display:none}
+.np-tr{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+.np-hint{text-align:center;font-size:12px;color:var(--dim);margin-top:12px}
+
+/* 音量：大号读数 + 轨道。整页只有一个实心强调按钮的地方就是这里 ——
+   音量是这台设备每天被操作次数最多的东西。 */
+.vol-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:2px}
+.vol-num{font-size:30px;font-weight:600;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  line-height:1;letter-spacing:-.5px}
+.vol-num i{font-size:14px;font-style:normal;color:var(--dim);margin-left:2px}
+
+/* 自定义 range 轨道。⚠️ 只有这一页有 paintRange() 写 inline 填充,所以这段
+   故意不抽进 base.css —— 抽过去会让 eq 页的滑块画成固定 50%。
+   轨道只画 6px 高,但控件本身 44px,可点区必须够手指戳(box-sizing:border-box
+   下 padding 算在高度之内,想撑大就得真的写高)。 */
+.rng{-webkit-appearance:none;appearance:none;height:44px;padding:19px 0;
+  border-radius:var(--r-pill);background-color:transparent;background-repeat:no-repeat;
+  background-position:0 center;background-size:100% 6px;
+  background-image:linear-gradient(90deg,var(--accent) 50%,var(--line) 50%);
+  cursor:pointer;touch-action:pan-y}
+.rng::-webkit-slider-runnable-track{height:6px;border-radius:var(--r-pill);background:transparent}
+.rng::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;margin-top:-5px;
+  border-radius:50%;background:var(--fg);border:none;box-shadow:0 0 0 1px var(--bg),0 2px 6px rgba(0,0,0,.6);cursor:pointer}
+.rng::-moz-range-track{height:6px;border-radius:var(--r-pill);background:transparent}
+.rng::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--fg);border:none;cursor:pointer}
+.rng:focus{outline:none}
+.rng:focus-visible{box-shadow:0 0 0 3px rgba(var(--accent-rgb),.2)}
+.mute-btn{flex:none;width:44px;height:44px;display:grid;place-items:center;border-radius:50%;cursor:pointer;
+  background:transparent;border:1px solid var(--line-2);color:var(--fg-2);transition:color var(--tap),border-color var(--tap)}
+.mute-btn:hover{color:var(--fg);border-color:var(--muted)}
+.mute-btn svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.mute-btn.on{color:var(--warn);border-color:rgba(var(--warn-rgb),.5);background:rgba(var(--warn-rgb),.1)}
+
+/* 列表（SD 目录 / WiFi 扫描）—— 统一一套行样式 */
+.list{display:grid;gap:6px;max-height:340px;overflow-y:auto;margin:12px 0;padding-right:2px}
+.list:empty{display:none}
+.li{display:flex;align-items:center;gap:10px;padding:11px 12px;min-height:44px;
+  background:var(--well);border:1px solid var(--line);border-radius:var(--r-ctl);
+  font-size:13.5px;color:var(--fg);cursor:pointer;transition:border-color var(--tap),background var(--tap)}
+.li:hover{border-color:var(--line-2);background:var(--surface-2)}
+.li svg{width:15px;height:15px;flex:none;stroke:var(--muted);fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.li.audio svg{stroke:var(--accent)}
+.li .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.li .sz{flex:none;font-size:11px;color:var(--dim);font-family:var(--mono)}
+.li .rm{flex:none;border:none;background:transparent;color:var(--dim);cursor:pointer;
+  min-width:32px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;
+  padding:0 6px;border-radius:7px;font-size:11.5px;font-family:inherit}
+.li .rm:hover{color:var(--err-tx);background:rgba(var(--err-rgb),.14)}
+.li.cur{border-color:rgba(var(--accent-rgb),.5);background:rgba(var(--accent-rgb),.1)}
+.li.unsupported{opacity:.45;cursor:default}
+.li .tag{font-size:10px;color:var(--ok-tx);border:1px solid rgba(var(--ok-rgb),.35);
+  background:rgba(var(--ok-rgb),.1);border-radius:var(--r-pill);padding:1px 7px;flex:none;letter-spacing:.4px}
+.li.sel{border-color:var(--accent);background:rgba(var(--accent-rgb),.13)}
+.empty{font-size:12.5px;color:var(--dim);padding:10px 2px}
+
+/* 面包屑 */
+#sd-crumb{display:flex;flex-wrap:wrap;align-items:center;gap:1px;margin-bottom:2px;font-size:12.5px}
+#sd-crumb a{color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;
+  min-height:32px;padding:4px 7px;border-radius:6px;max-width:150px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#sd-crumb a:hover{background:var(--surface-2);color:var(--fg)}
+#sd-crumb a.last{color:var(--fg);font-weight:600}
+#sd-crumb .sep{color:var(--dim);flex:none}
+
+/* 状态行（空闲/连接中/播放中/出错） */
+.state{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted);
+  font-family:var(--mono);letter-spacing:.3px;margin-top:12px}
+.state::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--dim);flex:none}
+.state.playing{color:var(--ok-tx)}
+.state.playing::before{background:var(--ok);box-shadow:0 0 0 3px rgba(var(--ok-rgb),.16)}
+.state.connecting{color:var(--warn)}
+.state.connecting::before{background:var(--warn);animation:pulse 1.2s ease-in-out infinite}
+.state.error{color:var(--err-tx)}
+.state.error::before{background:var(--err)}
+
+/* 顶栏环境读数（温度·湿度）。极窄屏先让位给设备名与接入状态。 */
+@media(max-width:399px){.chip.env{display:none}}
+/* 温湿度的大读数：比其它格子高一档，但仍走等宽 + tabular，数值跳动不抖 */
+.kv .v.hi{font-size:17px;font-weight:600;letter-spacing:-.2px}
+/* 「上次复位」框：只描一条边，不填底色 —— 宽屏时所在组本身已是卡片，
+   再填一层就变成框中框（§29.3 否掉过一次）。 */
+.rstbox{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;
+  margin-top:14px;padding:12px 14px;border:1px solid var(--line);
+  border-radius:var(--r-ctl)}
+.rstbox .cell{min-width:0}
+.rstbox .k{font-size:10.5px;color:var(--dim);letter-spacing:.9px;
+  text-transform:uppercase;margin-bottom:4px}
+.rstbox .v{font-size:14px;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rstbox .v.warn{color:var(--warn);font-size:12.5px}
+@media(max-width:459px){.rstbox{grid-template-columns:minmax(0,1fr)}}
+
+/* 诊断入口 */
+.entry{display:flex;align-items:center;gap:12px;width:100%;min-height:56px;padding:12px 14px;
+  background:var(--well);border:1px solid var(--line);border-radius:var(--r-ctl);
+  color:var(--fg);text-decoration:none;margin-top:8px;transition:border-color var(--tap)}
+.entry:hover{border-color:var(--line-2);color:var(--fg)}
+.entry svg.ic{width:18px;height:18px;flex:none;stroke:var(--muted);fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.entry .t{flex:1;min-width:0;font-size:14px;font-weight:500}
+.entry .s{display:block;font-size:11.5px;color:var(--muted);font-weight:400;margin-top:2px}
+.entry .go{width:15px;height:15px;flex:none;stroke:var(--dim);fill:none;stroke-width:2;stroke-linecap:round}
+
+/* 宽屏：输入源与音量并排一屏放得下,但不再分栏塞卡片(§28 已证明不等高会显乱),
+   只把内容区限宽居中并放大字号余量。 */
+@media(min-width:900px){
+  .list{max-height:460px}
+  .np-t{font-size:22px}
+}
+</style></head><body>
+
+<div class="app">
+
+<header class="hd">
+  <span class="lamp" id="conn-lamp"></span>
+  <span class="name is-def" id="bar-name">AirPlay 接收器</span>
+  <span class="chip env" id="bar-env" hidden></span>
+  <span class="chip" id="bar-net">读取中</span>
+</header>
+
+<main class="body">
+
+<!-- ============ 播放 ============ -->
+<section class="view" id="v-play">
+
+  <div class="grp">
+    <h2>输入源</h2>
+    <div class="src-row static" id="src-airplay">
+      <svg class="ic" viewBox='0 0 24 24'><path d='M11 5 6 9H3v6h3l5 4z'/><path d='M15.5 8.5a5 5 0 0 1 0 7'/><path d='M18.5 5.5a9 9 0 0 1 0 13'/></svg>
+      <span class='nm'>AirPlay</span><span class='st' id='st-airplay'>待机</span>
+    </div>
+    <button class="src-row" id="src-sd" type='button' onclick="go('music');musicTab('sd')">
+      <svg class="ic" viewBox='0 0 24 24'><rect x='5' y='3' width='14' height='18' rx='2'/><path d='M9 3v6h6V3'/></svg>
+      <span class='nm'>SD 卡</span><span class='st' id='st-sd'>—</span>
+    </button>
+    <button class="src-row" id="src-radio" type='button' onclick="go('music');musicTab('radio')">
+      <svg class="ic" viewBox='0 0 24 24'><circle cx='12' cy='12' r='9'/><path d='M10 8.5l6 3.5-6 3.5z'/></svg>
+      <span class='nm'>网络音乐</span><span class='st' id='st-radio'>—</span>
+    </button>
+    <p class="desc" style="margin:14px 0 0">绿=这一路正在出声。AirPlay 行的状态来自设备自己收到的推流信息（服务在跑 / 正在推 / 被蓝牙占走），手机上推的曲目会显示在下方「正在播放」；但<b>播放/暂停/切曲仍然只能在手机上做</b>——本机控不了那一路。</p>
+  </div>
+
+  <div class="grp">
+    <h2>正在播放<span class="tag" id="np-src"></span></h2>
+    <div id="np" hidden>
+      <div class="np-t" id="np-title"></div>
+      <div class="np-m" id="np-meta"></div>
+      <div class="np-clock" id="np-clock"></div>
+      <div class="np-tr" id="np-tr">
+        <button class="btn-ico" id="tr-prev" onclick="trSkip('prev')" title='上一条'>
+          <svg viewBox='0 0 24 24'><path d='M18 6v12L9 12z' fill='currentColor' stroke='none'/><rect x='6' y='6' width='2' height='12' rx='1' fill='currentColor' stroke='none'/></svg></button>
+        <button class="btn-ico lg" id="tr-stop" onclick="trStop()" title='停止'>
+          <svg viewBox='0 0 24 24'><rect x='7' y='7' width='10' height='10' rx='1.5' fill='currentColor' stroke='none'/></svg></button>
+        <button class="btn-ico" id="tr-next" onclick="trSkip('next')" title='下一条'>
+          <svg viewBox='0 0 24 24'><path d='M6 6v12l9-6z' fill='currentColor' stroke='none'/><rect x='16' y='6' width='2' height='12' rx='1' fill='currentColor' stroke='none'/></svg></button>
+      </div>
+      <p class="np-hint" id="np-hint"></p>
+    </div>
+    <div id="np-empty">现在没有在播的东西。<br>本地音乐到「音乐」页挑一首；手机推 AirPlay 时，收到的曲目信息会出现在这里。</div>
+  </div>
+
+  <div class="grp">
+    <h2>音量</h2>
+    <div class="vol-head">
+      <span class="vol-num" id="vol-pct">50<i>%</i></span>
+      <button class="mute-btn" id="mute-btn" type='button' onclick='toggleMute()' title='静音/恢复'>
+        <svg viewBox='0 0 24 24'><path d='M11 5 6 9H3v6h3l5 4z'/><path d='M16 9l5 6M21 9l-5 6'/></svg></button>
+    </div>
+    <div class="slider-row">
+      <input type='range' class='rng' id='volume' min='0' max='100' step='1' value='50'
+       oninput='onVolumeInput(this.value)' onchange='onVolumeCommit(this.value)'>
+    </div>
+    <p class="desc">与 AirPlay 共用同一个音量：调这里就是调设备总音量，正在推流时也立即生效。</p>
+  </div>
+
+</section>
+
+<!-- ============ 音乐 ============ -->
+<section class="view" id="v-music">
+
+  <div class="grp">
+    <h2>曲目来源</h2>
+    <div class="seg">
+      <button type='button' id="seg-sd" class="on" onclick="musicTab('sd')">SD 卡</button>
+      <button type='button' id="seg-radio" onclick="musicTab('radio')">网络音乐</button>
+    </div>
+  </div>
+
+  <div id="mtab-sd">
+    <div class="grp">
+      <h2>SD 卡<span class="tag" id="sd-space"></span></h2>
+      <p class="desc">支持 MP3 / FLAC / WAV / AAC(M4A) / OGG。点目录进入，点歌曲播放——选目录会把<b>整个目录</b>排成播放列表，所以「上一条 / 下一条」可用。</p>
+      <div class="state" id="sd-status">检查中…</div>
+      <div id="sd-crumb"></div>
+      <div id="sd-list" class="list"></div>
+      <div class="row">
+        <button class="btn btn-primary" id='sd-playall-btn' type='button' onclick='sdPlayAll()'>
+          <svg viewBox='0 0 24 24'><path d='M8 5l11 7-11 7z' fill='currentColor' stroke='none'/></svg>播放本目录</button>
+        <button class="btn" id='sd-stop-btn' type='button' onclick='sdStop()'>停止</button>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn" id='sd-prev-btn' type='button' onclick='sdPrev()'>上一条</button>
+        <button class="btn" id='sd-next-btn' type='button' onclick='sdNext()'>下一条</button>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <input type='file' id='sd-file' accept='.mp3,.flac,.wav,.m4a,.aac,.ogg,.oga,audio/*' style='display:none' onchange='sdUpload()'>
+        <button class="btn btn-sm" id='sd-upload-btn' type='button' onclick='document.getElementById("sd-file").click()'>上传到当前目录</button>
+        <button class="btn btn-sm" id='sd-mkdir-btn' type='button' onclick='sdMkdir()'>新建文件夹</button>
+        <button class="btn btn-sm" id='sd-remount-btn' type='button' onclick='sdRemount()'>重新挂载</button>
+      </div>
+      <p class="hint">上传直接写进 SD 卡。正在播放时上传/删除会抢占 SD 卡的 SPI 总线，音频可能卡一下。文件名支持中文。</p>
+      <div id='sd-msg'></div>
+    </div>
+  </div>
+
+  <div id="mtab-radio" hidden>
+    <div class="grp">
+      <h2>网络音乐</h2>
+      <p class="desc">通过 HTTP 播放音频文件或流。填入 MP3 / FLAC / AAC / OGG / WAV 直链（例如 NAS 上的文件）、电台流地址，或 <b>m3u / m3u8 歌单</b>（按顺序整张播放）。</p>
+      <div class="form-group"><label for='radio-url'>音频地址</label>
+        <input type='text' id='radio-url' placeholder='http://192.168.1.50/music/song.mp3 或 http://example.com/list.m3u'></div>
+      <div class="row">
+        <button class="btn btn-primary" id='radio-play-btn' type='button' onclick='radioPlay()'>
+          <svg viewBox='0 0 24 24'><path d='M8 5l11 7-11 7z' fill='currentColor' stroke='none'/></svg>播放</button>
+        <button class="btn" id='radio-stop-btn' type='button' onclick='radioStop()'>停止</button>
+      </div>
+      <div class="row" style="margin-top:10px">
+        <button class="btn" id='radio-prev-btn' type='button' onclick='radioPrev()'>上一条</button>
+        <button class="btn" id='radio-next-btn' type='button' onclick='radioNext()'>下一条</button>
+      </div>
+      <div class="state" id="radio-status">空闲</div>
+      <p class="hint" id='radio-idx-note' style="display:none">「上一条 / 下一条」只在歌单模式下有效。放到最后一曲会自动停止；手动点「下一条」会绕回第一曲。</p>
+      <div id='radio-msg'></div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ 设置 ============ -->
+<section class="view" id="v-set">
+
+  <div class="grp">
+    <h2>WiFi 网络<span class="tag" id="wifi-tag"></span></h2>
+    <p class="desc">改完会重启设备。扫描期间 WiFi 会短暂断流，正在播的流会停一下。</p>
+    <button class="btn" type='button' onclick='scanWiFi()'>
+      <svg viewBox='0 0 24 24'><path d='M21 12a9 9 0 1 1-3-6.7'/><path d='M21 4v5h-5'/></svg>扫描网络</button>
+    <div id='wifi-list' class="list"></div>
+    <div class="form-group"><label for='wifi-ssid'>网络名称 (SSID)</label>
+      <input type='text' id='wifi-ssid' placeholder='输入或从上方选择网络'></div>
+    <div class="form-group"><label for='wifi-pass'>密码</label>
+      <input type='password' id='wifi-pass' placeholder='请输入密码'></div>
+    <button class="btn btn-primary btn-block" type='button' onclick='saveWiFi()'>连接 WiFi</button>
+    <div id='wifi-msg'></div>
+  </div>
+
+  <div class="grp">
+    <h2>设备</h2>
+    <div class="form-group"><label for='dev-name'>AirPlay 设备名称</label>
+      <input type='text' id='dev-name' placeholder='我的音箱'></div>
+    <button class="btn" type='button' onclick='saveName()'>保存名称</button>
+    <div id='name-msg'></div>
+    <div class="form-group" style="margin-top:20px"><label for='led-brightness'>LED 亮度</label>
+      <div class="slider-row"><input type='range' class='rng' id='led-brightness' min='0' max='255' value='128' oninput='onBrightnessInput(this)'>
+        <span id='led-pct'>50%</span></div></div>
+    <button class="btn" type='button' onclick='saveBrightness()'>保存亮度</button>
+    <div id='brightness-msg'></div>
+  </div>
+
+  <div class="grp">
+    <h2>输出</h2>
+    <div id='chan-group'>
+      <div class="form-group"><label for='chan-mode' id='chan-label'>输出声道</label>
+        <select id='chan-mode' onchange='saveChannel()'>
+          <option value='0'>立体声</option>
+          <option value='1'>仅左声道</option>
+          <option value='2'>仅右声道</option>
+          <option value='3'>单声道 (L+R)</option>
+        </select></div>
+      <div id='chan-msg'></div>
+    </div>
+    <div id='dual-group' style="display:none">
+      <div class="form-group"><label for='dual-mode'>DAC 配置</label>
+        <select id='dual-mode' onchange='saveDual()'>
+          <option value='0'>2.1（卫星箱 / 低音炮）</option>
+          <option value='1'>双线分音 (Bi-Amp)</option>
+        </select></div>
+      <div id='dual-msg'></div>
+    </div>
+    <div id='eq-link' style="display:none">
+      <a href='/eq' class="entry"><svg class="ic" viewBox='0 0 24 24'><path d='M4 18v-6M10 18V6M16 18v-9M22 18v-4'/></svg>
+        <span class='t'>均衡器<span class='s'>参量 EQ / 分频点 / 低音炮</span></span>
+        <svg class="go" viewBox='0 0 24 24'><path d='M9 6l6 6-6 6'/></svg></a>
+    </div>
+  </div>
+
+</section>
+
+<!-- ============ 系统 ============ -->
+<section class="view" id="v-sys">
+
+  <div class="grp" id="env-grp" hidden>
+    <h2>环境与时间<span class="tag" id="env-age"></span></h2>
+    <div class="kvs">
+      <div class="kv" id="env-temp-cell"><div class='k'>温度</div><div class='v hi' id='env-temp'>-</div></div>
+      <div class="kv" id="env-hum-cell"><div class='k'>湿度</div><div class='v hi' id='env-hum'>-</div></div>
+      <div class="kv"><div class='k'>系统时间</div><div class='v' id='env-clock'>-</div></div>
+      <div class="kv"><div class='k'>NTP 校时</div><div class='v' id='env-ntp'>-</div></div>
+    </div>
+  </div>
+
+  <div class="grp">
+    <h2>网络<span class="tag" id="info-refresh">-</span></h2>
+    <div class="kvs">
+      <div class="kv"><div class='k'>IP 地址</div><div class='v' id='info-ip'>-</div></div>
+      <div class="kv"><div class='k'>接入方式</div><div class='v' id='info-via'>-</div></div>
+      <div class="kv"><div class='k'>WiFi SSID</div><div class='v' id='info-ssid'>-</div></div>
+      <div class="kv"><div class='k'>信号强度</div><div class='v' id='info-rssi'>-</div></div>
+      <div class="kv"><div class='k'>信道</div><div class='v' id='info-chan'>-</div></div>
+      <div class="kv"><div class='k'>协议</div><div class='v' id='info-phy'>-</div></div>
+      <div class="kv"><div class='k'>BSSID</div><div class='v' id='info-bssid'>-</div></div>
+      <div class="kv"><div class='k'>MAC 地址</div><div class='v' id='info-mac'>-</div></div>
+      <div class="kv"><div class='k'>热点</div><div class='v' id='info-ap'>-</div></div>
+    </div>
+  </div>
+
+  <div class="grp">
+    <h2>设备</h2>
+    <div class="kvs">
+      <div class="kv"><div class='k'>固件版本</div><div class='v' id='info-fw'>-</div></div>
+      <div class="kv"><div class='k'>运行槽</div><div class='v' id='info-slot'>-</div></div>
+      <div class="kv"><div class='k'>可用内存</div><div class='v' id='info-heap'>-</div></div>
+      <div class="kv"><div class='k'>设备名称</div><div class='v' id='info-name'>-</div></div>
+      <div class="kv"><div class='k'>音频属主</div><div class='v' id='info-src'>-</div></div>
+      <div class="kv"><div class='k'>复位原因</div><div class='v' id='info-reset'>-</div></div>
+    </div>
+    <!-- 复位时间 = 当前墙钟 - 运行时长，所以它只在 NTP 同步之后才有值；
+         没同步时这一格显示"待时间同步"，不拿 1970 糊上去。 -->
+    <div class="rstbox">
+      <div class="cell"><div class='k'>上次复位时间</div><div class='v' id='rst-time'>-</div></div>
+      <div class="cell"><div class='k'>本次运行时长</div><div class='v' id='rst-uptime'>-</div></div>
+    </div>
+  </div>
+
+  <div class="grp">
+    <h2>诊断</h2>
+    <a href='/logs' class="entry"><svg class="ic" viewBox='0 0 24 24'><path d='M5 4h14v16H5z'/><path d='M8 9h8M8 13h5'/></svg>
+      <span class='t'>系统日志<span class='s'>WebSocket 实时查看设备日志</span></span>
+      <svg class="go" viewBox='0 0 24 24'><path d='M9 6l6 6-6 6'/></svg></a>
+    <a href='/speedtest' class="entry"><svg class="ic" viewBox='0 0 24 24'><path d='M12 20V10M6 20v-6M18 20V4'/></svg>
+      <span class='t'>WiFi 测速<span class='s'>测试延迟与上下行吞吐量</span></span>
+      <svg class="go" viewBox='0 0 24 24'><path d='M9 6l6 6-6 6'/></svg></a>
+    <button class="btn btn-danger btn-block" type='button' style="margin-top:16px" onclick='restart()'>重启设备</button>
+    <p class="desc" style="margin:16px 0 0">热点常开时可用 <b>ESP32-AirPlay-Setup</b> 连上后访问 <b>http://192.168.4.1</b>；Apple 设备也可直接用 <b>http://esp32-airplay.local</b>。固件升级见下面「固件升级」一组（不设口令时该接口是关的，只能 USB 烧）。</p>
+  </div>
+
+  <!-- ============ 固件升级（系统视图内的一组，不另起壳） ============ -->
+  <div class="grp" id="ota-grp">
+    <h2>固件升级<span class="tag" id="ota-state">—</span></h2>
+    <p class="desc" id="ota-desc">读取中…</p>
+
+    <div class="form-group" id="ota-cur-row" hidden><label for='ota-cur'>当前口令</label>
+      <input type='password' id='ota-cur' autocomplete='off' placeholder='上传固件 / 修改口令都要用它'></div>
+
+    <div class="form-group"><label for='ota-new' id='ota-new-label'>设置升级口令</label>
+      <input type='password' id='ota-new' autocomplete='new-password' placeholder='留空 = 关闭网页升级（回到只能 USB 烧）'></div>
+
+    <div class="row">
+      <button class="btn btn-sm" type='button' onclick='otaSavePw()'>保存口令</button>
+    </div>
+    <div id='ota-pw-msg'></div>
+
+    <div class="row" style="margin-top:16px">
+      <input type='file' id='ota-file' accept='.bin' style='display:none'>
+      <button class="btn btn-sm" id='ota-pick-btn' type='button' onclick='document.getElementById("ota-file").click()'>选择 .bin</button>
+      <button class="btn btn-sm" id='ota-btn' type='button' onclick='startOTA()' disabled>上传并升级</button>
+    </div>
+    <p class="hint" id='ota-file-name'></p>
+    <div id='ota-msg'></div>
+    <p class="hint">升级写的是另一个 app 槽，镜像验不过不会切过去；成功后设备自动重启。<b>看上面「设备 → 运行槽」是否从 <code>ota_0</code> 翻到 <code>ota_1</code> 就知道有没有生效。</b>正在播 SD / 网络音乐时会被拒绝——先停止再升级。</p>
+  </div>
+
+</section>
+
+</main>
+
+<div class="dock">
+  <div class="mini" id="mini">
+    <span class="lamp"></span>
+    <span class="txt"><span class="t" id="mini-t">—</span><span class="s" id="mini-s"></span></span>
+    <span class="src" id="mini-src"></span>
+  </div>
+  <nav class="nav">
+    <button class="nav-i on" type='button' data-view="play" onclick="go('play')">
+      <svg viewBox='0 0 24 24'><path d='M8 5l11 7-11 7z' fill='currentColor' stroke='none'/></svg>播放
+      <span class="dotmark"></span></button>
+    <button class="nav-i" type='button' data-view="music" onclick="go('music')">
+      <svg viewBox='0 0 24 24'><path d='M9 18V6l10-2v12'/><circle cx='6.5' cy='18' r='2.5'/><circle cx='16.5' cy='16' r='2.5'/></svg>音乐</button>
+    <button class="nav-i" type='button' data-view="set" onclick="go('set')">
+      <svg viewBox='0 0 24 24'><circle cx='12' cy='12' r='3'/><path d='M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1'/></svg>设置</button>
+    <button class="nav-i" type='button' data-view="sys" onclick="go('sys')">
+      <svg viewBox='0 0 24 24'><rect x='3' y='4' width='18' height='13' rx='2'/><path d='M8 21h8M12 17v4'/></svg>系统</button>
+  </nav>
+</div>
+
+</div>
+<script src="/app.js"></script>
+</body></html>

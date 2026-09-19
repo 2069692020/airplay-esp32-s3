@@ -1,0 +1,40 @@
+# Partition Table — 16MB flash, no OTA
+#
+# 为 ESP32-S3 N16R8 定制: 不要 OTA(更新一律走 COM 口烧录), 把省下的空间
+# 全给 app 和 storage, 避免以后加功能时精打细算。
+#
+# 对比原 components/boards/partitions.csv (双 OTA):
+#   原来: nvs 64K / otadata 8K / phy_init 4K / nvs_key 4K / ota_0 3M / ota_1 3M / storage 1.9M
+#   现在: nvs 64K / phy_init 4K / app 4M / storage 11.5M
+#
+# 去掉了:
+#   otadata  — 双 OTA 的启动槽记录, 单 app 不需要
+#   nvs_key  — NVS 加密密钥分区, 本项目未启用 NVS 加密
+#   ota_1    — 第二个 app 槽
+#
+# ⚠️ 关键约束: app 分区必须在 64KB 对齐。这里 app 从 0x20000 (128KB) 起,
+#    正好是 64KB 的倍数, 满足 ESP-IDF 的 app image 落位要求 (0x10000 是下限)。
+#
+# ⚠️ 布局变了之后, 旧 flash 上的数据全对不上, 必须彻底擦除一次:
+#      python build_fw.py erase --port COM3
+#    之后:
+#      python build_fw.py flash --port COM3
+#    不擦除可以启动, 但 nvs 里旧键的位置会错乱 (旧 otadata 残留等)。
+#
+# ⚠️ 本表一旦定下, 以后 OTA 功能就没有了。网页的固件升级入口会失效,
+#    更新固件只能用 USB 线。这是刻意的取舍。
+#
+# 空间账 (16MB = 0x1000000):
+#   0x00000 - 0x08FFF  bootloader (32KB 保留)
+#   0x09000 - 0x18FFF  nvs        64KB
+#   0x19000 - 0x19FFF  phy_init    4KB
+#   0x1A000 - 0x1FFFF  (24KB 填充, 为了对齐下一个分区到 128KB 边界)
+#   0x20000 - 0x41FFFF  app       4MB    ← 原来 3MB
+#   0x420000 - 0xFFFFFF storage   11.5MB ← 原来 1.9MB
+#                      合计 = 0x1000000 ✅
+#
+# Name,   Type, SubType,  Offset,   Size,     Flags
+nvs,      data, nvs,      0x9000,   0x10000,
+phy_init, data, phy,      0x19000,  0x1000,
+app,      app,  factory,  0x20000,  0x400000,
+storage,  data, spiffs,   0x420000, 0xBE0000,

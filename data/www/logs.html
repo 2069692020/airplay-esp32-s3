@@ -1,0 +1,99 @@
+<!DOCTYPE html><html><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel="stylesheet" href="/base.css">
+<title>系统日志</title>
+<style>
+/* 整屏工具页：不滚动 body，只有日志区滚。原先这里自带一套 GitHub 配色
+   (#0d1117/#161b22/#58a6ff)，现在只留布局，颜色和外壳走 base.css。 */
+body{height:100vh;padding:12px;display:flex;flex-direction:column;overflow:hidden}
+.toolbar{flex:none;margin-bottom:12px}
+/* 未连接 = 红。base 的 .dot 默认是灰的，这一页"灰"没有"掉线"的含义，所以把默认态
+   改回红色；连上后 JS 加 .ok（base 里是绿色带脉冲光晕）。
+   ⚠️ 必须写 :not(.ok) —— 它和 base 的 .dot.ok 特异性相同 (0,2,0)，而页面内联样式
+      排在链接表之后，不排他就会永远盖住绿色，"已连接"灯再也不亮。 */
+.toolbar .dot:not(.ok){background:var(--err);box-shadow:0 0 0 4px rgba(var(--err-rgb),.16)}
+#log{flex:1;min-height:0;overflow-y:auto;padding:12px 14px;font-family:var(--mono);
+  font-size:12px;line-height:1.6;white-space:pre-wrap;word-break:break-all;color:var(--fg-2);
+  background:var(--well);border:1px solid var(--line);border-radius:var(--r-card)}
+/* ANSI 色 —— 保留原映射，颜色对齐到新 token */
+.a30{color:var(--dim)}.a31{color:var(--err)}.a32{color:var(--ok)}.a33{color:var(--warn)}
+.a34{color:var(--accent)}.a35{color:#bc8cff}.a36{color:#39c5cf}.a37{color:var(--fg-2)}
+.a90{color:var(--muted)}.a91{color:#ff7b72}.a92{color:#56d364}.a93{color:var(--warn)}
+.a94{color:#79c0ff}.a95{color:#d2a8ff}.a96{color:#56d4dd}.a97{color:#f0f6fc}
+</style></head><body>
+<div class='toolbar'>
+<a href='/'>&larr; 返回</a>
+<h1>系统日志</h1>
+<span id='dot' class='dot'></span>
+<button class='btn btn-sm' onclick='clear_log()'>清空</button>
+<button class='btn btn-sm' id='scroll-btn' onclick='toggle_scroll()'>自动滚动：开</button>
+</div>
+<div id='log'><div id='anchor'></div></div>
+<script>
+var log=document.getElementById('log'),dot=document.getElementById('dot'),anchor=document.getElementById('anchor'),autoScroll=true,maxLines=2000;
+function set_auto(v){autoScroll=v;document.getElementById('scroll-btn').textContent='自动滚动：'+(v?'开':'关');}
+function toggle_scroll(){set_auto(!autoScroll);if(autoScroll)log.scrollTop=log.scrollHeight;}
+function at_bottom(){return log.scrollHeight-log.scrollTop-log.clientHeight<40;}
+// 自动滚动要让位给正在阅读的人：往上滚就暂停，新日志不会把视图拽回底部；
+// 滚回底部则自动恢复。
+log.addEventListener('scroll',function(){
+  if(autoScroll&&!at_bottom())set_auto(false);
+  else if(!autoScroll&&at_bottom())set_auto(true);
+});
+function clear_log(){log.innerHTML='';anchor=document.createElement('div');anchor.id='anchor';log.appendChild(anchor);}
+var ansiRe=/\x1b\[([0-9;]*)m/g;
+var ansiCls={'30':1,'31':1,'32':1,'33':1,'34':1,'35':1,'36':1,'37':1,'90':1,'91':1,'92':1,'93':1,'94':1,'95':1,'96':1,'97':1};
+var letterCls={'E':'a31','W':'a33','I':'a32','D':'a30','V':'a30'};
+function colorize(text){
+  var frag=document.createDocumentFragment();
+  text.split('\n').forEach(function(line){
+    if(!line)return;
+    var wrap=document.createElement('span');
+    var hasAnsi=ansiRe.test(line);
+    ansiRe.lastIndex=0;
+    if(hasAnsi){
+      var last=0,cls=null,m;
+      while((m=ansiRe.exec(line))!==null){
+        if(m.index>last){
+          var s=document.createElement('span');
+          if(cls)s.className=cls;
+          s.textContent=line.substring(last,m.index);
+          wrap.appendChild(s);
+        }
+        var p=m[1].split(';');cls=null;
+        for(var i=0;i<p.length;i++){if(ansiCls[p[i]])cls='a'+p[i];}
+        last=ansiRe.lastIndex;
+      }
+      if(last<line.length){
+        var s=document.createElement('span');
+        if(cls)s.className=cls;
+        s.textContent=line.substring(last);
+        wrap.appendChild(s);
+      }
+    }else{
+      var ch=line.charAt(0);
+      if(letterCls[ch])wrap.className=letterCls[ch];
+      wrap.textContent=line;
+    }
+    wrap.appendChild(document.createTextNode('\n'));
+    frag.appendChild(wrap);
+  });
+  var follow=autoScroll&&at_bottom();
+  log.insertBefore(frag,anchor);
+  var trimmed=0;
+  while(log.childNodes.length>maxLines+1){
+    trimmed+=log.firstChild.offsetHeight||0;
+    log.removeChild(log.firstChild);
+  }
+  if(follow)log.scrollTop=log.scrollHeight;
+  else if(trimmed)log.scrollTop=Math.max(0,log.scrollTop-trimmed);
+}
+function connect(){
+  var ws=new WebSocket('ws://'+location.host+'/ws/logs');
+  ws.onopen=function(){dot.classList.add('ok');};
+  ws.onclose=function(){dot.classList.remove('ok');setTimeout(connect,2000);};
+  ws.onmessage=function(e){colorize(e.data);};
+}
+connect();
+</script></body></html>

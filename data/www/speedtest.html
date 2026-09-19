@@ -1,0 +1,159 @@
+<!DOCTYPE html><html><head>
+<meta charset='UTF-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1'>
+<link rel="stylesheet" href="/base.css">
+<title>WiFi 测速</title>
+<style>
+/* 只留本页专属：大号读数、日志框。统计行用 base.css 的 .kvline（本页原先也叫
+   .kv —— 与新 base.css 的读数网格同名不同义，留着会静默混进 border-bottom）。
+   外壳/区块/颜色/圆角/按钮全部来自 base.css。 */
+h1{font-size:18px;font-weight:600;letter-spacing:.2px}
+.blk select{margin-bottom:10px}
+.big{font-size:32px;font-weight:600;color:var(--accent-hi);font-family:var(--mono);
+  font-variant-numeric:tabular-nums;letter-spacing:-1px}
+.unit{font-size:13px;color:var(--muted);margin-left:5px;font-weight:400}
+.readout{text-align:center;padding:12px 0}
+.log{font-family:var(--mono);font-size:11px;color:var(--muted);max-height:140px;overflow-y:auto;
+  padding:10px;background:var(--well);border:1px solid var(--line);border-radius:var(--r-ctl);white-space:pre-wrap}
+</style></head><body>
+<div class='wrap'>
+<h1>WiFi 测速</h1>
+<p class='sub'>测量浏览器与本设备之间的延迟和吞吐量。</p>
+
+<div class='panel'>
+<div class='blk'>
+<h2>延迟 Ping (RTT)</h2>
+<div class='kvline'><span class='k'>采样数</span><span class='v' id='p-n'>0</span></div>
+<div class='kvline'><span class='k'>最小值</span><span class='v' id='p-min'>—</span></div>
+<div class='kvline'><span class='k'>平均值</span><span class='v' id='p-avg'>—</span></div>
+<div class='kvline'><span class='k'>最大值</span><span class='v' id='p-max'>—</span></div>
+<div class='kvline'><span class='k'>抖动（标准差）</span><span class='v' id='p-jit'>—</span></div>
+<button class='btn btn-block' id='b-ping' onclick='runPing()'>开始 20 次 Ping</button>
+</div>
+
+<div class='blk'>
+<h2>下载（设备 → 浏览器）</h2>
+<div class='readout'><span class='big' id='dl-mbps'>0.00</span><span class='unit'>Mbit/s</span></div>
+<div class='kvline'><span class='k'>字节数</span><span class='v' id='dl-bytes'>—</span></div>
+<div class='kvline'><span class='k'>耗时</span><span class='v' id='dl-time'>—</span></div>
+<div class='bar'><div id='dl-bar'></div></div>
+<div class='form-group' style='margin-top:14px'><label for='dl-size'>数据量</label>
+<select id='dl-size'>
+  <option value='262144'>256 KB</option>
+  <option value='1048576' selected>1 MB</option>
+  <option value='4194304'>4 MB</option>
+  <option value='8388608'>8 MB</option>
+</select></div>
+<button class='btn btn-block' id='b-dl' onclick='runDownload()'>开始下载测试</button>
+</div>
+
+<div class='blk'>
+<h2>上传（浏览器 → 设备）</h2>
+<div class='readout'><span class='big' id='ul-mbps'>0.00</span><span class='unit'>Mbit/s</span></div>
+<div class='kvline'><span class='k'>字节数</span><span class='v' id='ul-bytes'>—</span></div>
+<div class='kvline'><span class='k'>耗时</span><span class='v' id='ul-time'>—</span></div>
+<div class='bar'><div id='ul-bar'></div></div>
+<div class='form-group' style='margin-top:14px'><label for='ul-size'>数据量</label>
+<select id='ul-size'>
+  <option value='262144'>256 KB</option>
+  <option value='1048576' selected>1 MB</option>
+  <option value='4194304'>4 MB</option>
+</select></div>
+<button class='btn btn-block' id='b-ul' onclick='runUpload()'>开始上传测试</button>
+</div>
+
+<div class='blk'>
+<h2>运行日志</h2>
+<div class='log' id='log'></div>
+</div>
+
+</div>
+<p class='foot'><a href='/'>← 返回主页</a></p>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+function log(s){const l=$('log');l.textContent+=s+'\n';l.scrollTop=l.scrollHeight;}
+function fmtBytes(n){if(n>=1048576)return (n/1048576).toFixed(2)+' MB';if(n>=1024)return (n/1024).toFixed(1)+' KB';return n+' B';}
+function fmtMs(ms){return ms.toFixed(2)+' ms';}
+
+async function runPing(){
+  const btn=$('b-ping');btn.disabled=true;
+  const N=20;const samples=[];
+  $('p-n').textContent='0';
+  for(let i=0;i<N;i++){
+    const t0=performance.now();
+    try{
+      await fetch('/api/speedtest/ping?'+Math.random(),{cache:'no-store'});
+      const dt=performance.now()-t0;
+      samples.push(dt);
+      $('p-n').textContent=samples.length;
+    }catch(e){log('ping 出错：'+e);break;}
+    await new Promise(r=>setTimeout(r,50));
+  }
+  if(samples.length){
+    const mn=Math.min(...samples),mx=Math.max(...samples);
+    const avg=samples.reduce((a,b)=>a+b,0)/samples.length;
+    const v=samples.reduce((a,b)=>a+(b-avg)*(b-avg),0)/samples.length;
+    const sd=Math.sqrt(v);
+    $('p-min').textContent=fmtMs(mn);
+    $('p-max').textContent=fmtMs(mx);
+    $('p-avg').textContent=fmtMs(avg);
+    $('p-jit').textContent=fmtMs(sd);
+    log(`ping 次数=${samples.length} 最小=${mn.toFixed(2)} 平均=${avg.toFixed(2)} 最大=${mx.toFixed(2)} 标准差=${sd.toFixed(2)} ms`);
+  }
+  btn.disabled=false;
+}
+
+async function runDownload(){
+  const btn=$('b-dl');btn.disabled=true;
+  const bytes=parseInt($('dl-size').value);
+  $('dl-bytes').textContent=fmtBytes(bytes);
+  $('dl-mbps').textContent='0.00';
+  $('dl-bar').style.width='0%';
+  const t0=performance.now();
+  try{
+    const resp=await fetch('/api/speedtest/download?bytes='+bytes+'&_='+Math.random(),{cache:'no-store'});
+    if(!resp.ok){throw new Error('HTTP '+resp.status);}
+    const reader=resp.body.getReader();
+    let got=0;
+    while(true){
+      const {done,value}=await reader.read();
+      if(done)break;
+      got+=value.length;
+      $('dl-bar').style.width=(100*got/bytes).toFixed(1)+'%';
+      const dt=(performance.now()-t0)/1000;
+      if(dt>0)$('dl-mbps').textContent=((got*8/1e6)/dt).toFixed(2);
+    }
+    const dt=(performance.now()-t0)/1000;
+    $('dl-time').textContent=(dt*1000).toFixed(0)+' ms';
+    $('dl-mbps').textContent=((got*8/1e6)/dt).toFixed(2);
+    log(`下载 ${fmtBytes(got)}，耗时 ${(dt*1000).toFixed(0)} ms = ${((got*8/1e6)/dt).toFixed(2)} Mbit/s`);
+  }catch(e){log('下载出错：'+e.message);}
+  btn.disabled=false;
+}
+
+async function runUpload(){
+  const btn=$('b-ul');btn.disabled=true;
+  const bytes=parseInt($('ul-size').value);
+  $('ul-bytes').textContent=fmtBytes(bytes);
+  $('ul-mbps').textContent='0.00';
+  $('ul-bar').style.width='0%';
+  // 预生成上传数据（64KB 分块填充，避免内存峰值）
+  const payload=new Uint8Array(bytes);
+  for(let i=0;i<bytes;i+=4){payload[i]=(i*73)&0xff;}
+  const t0=performance.now();
+  try{
+    const resp=await fetch('/api/speedtest/upload',{method:'POST',body:payload,headers:{'Content-Type':'application/octet-stream'}});
+    if(!resp.ok){throw new Error('HTTP '+resp.status);}
+    const dt=(performance.now()-t0)/1000;
+    const txt=await resp.text();
+    $('ul-bar').style.width='100%';
+    $('ul-time').textContent=(dt*1000).toFixed(0)+' ms';
+    $('ul-mbps').textContent=((bytes*8/1e6)/dt).toFixed(2);
+    log(`上传 ${fmtBytes(bytes)}，耗时 ${(dt*1000).toFixed(0)} ms = ${((bytes*8/1e6)/dt).toFixed(2)} Mbit/s（设备返回：${txt.trim()}）`);
+  }catch(e){log('上传出错：'+e.message);}
+  btn.disabled=false;
+}
+</script>
+</body></html>

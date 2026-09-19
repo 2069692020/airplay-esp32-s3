@@ -1,0 +1,55 @@
+menu "SD card (SPI)"
+
+    config SD_CARD_ENABLED
+        bool "Enable SD card support"
+        default y
+        help
+            Mount a FAT-formatted SD card over SPI at /sdcard and expose it to the
+            web UI (browse / play / upload / delete).  Disabling it compiles the
+            whole feature out; the web panel then reports "not supported".
+
+            The card is never formatted by the firmware — a failed mount leaves
+            the card's contents untouched.
+
+    if SD_CARD_ENABLED
+
+        config SD_CS_GPIO
+            int "SD card chip select (CS) GPIO"
+            default 47
+            help
+                Chip select for the SD card's SPI interface.
+
+        config SD_SCLK_GPIO
+            int "SD card clock (SCLK) GPIO"
+            default 45
+            help
+                SPI clock.  Note GPIO45 is a strapping pin (VDD_SPI voltage
+                select) on ESP32-S3 — driving it after boot is fine, but a card
+                socket that pulls it low at reset will change the flash/PSRAM
+                voltage.  This default matches the socket already wired on the
+                N16R8 + PCM5102A build.
+
+        config SD_MISO_GPIO
+            int "SD card data in (MISO) GPIO"
+            default 21
+
+        config SD_MOSI_GPIO
+            int "SD card data out (MOSI) GPIO"
+            default 48
+            help
+                GPIO48 is the upstream default for the RGB status LED.  This
+                build already sets CONFIG_LED_RGB_GPIO=-1, so the pin is free.
+
+        config SD_SPI_FREQ_KHZ
+            int "SD card SPI clock (kHz)"
+            range 400 20000
+            default 10000
+            help
+                Clock used for data transfers (card probing always runs at
+                400 kHz first).  10 MHz is a safe default; raise it to 20000 for
+                faster browsing if the card and the wiring tolerate it.  Lower it
+                if you see "sdmmc_read/write failed" or read timeouts in the log.
+
+    endif # SD_CARD_ENABLED
+
+endmenu

@@ -1,0 +1,369 @@
+/* ==========================================================================
+   AirPlay 接收器 Web UI —— 设计系统 (index / eq / logs / speedtest 四页共用)
+   --------------------------------------------------------------------------
+   视觉基调（2026-09-19 重做）：中性近黑 + 冷蓝强调色 + 平面描边。
+   上一套是「暗底 + 粉红渐变玻璃拟态 + 顶部高光线 + 大圆角阴影」，改了三版
+   （卡片堆 → 具名网格 → 单面板发丝线）都在同一套词汇里腾挪，越改越像
+   「通用深色后台」。这次换词汇：像设备面板，不像网页。
+     · 不用渐变、不用外发光、不用阴影堆叠 —— 层次只靠描边和底色差一档
+     · 强调色只出现在「当前 / 可操作」上，其余一律走文字梯度
+     · 所有数值用等宽 + tabular-nums，读数不会随内容跳动
+
+   ⚠️ 有意**不**放进这里的：主页 range 滑块的自定义轨道/滑块。它的填充进度
+      靠 index.html 的 paintRange() 写 inline background-image —— 抽进来会让
+      没有这段 JS 的 eq 页滑块画成固定 50% 填充。这里只放 .slider-row 的
+      **布局**（主页和 eq 都要），轨道留给主页专属；eq 用 accent-color。
+
+   特异性提醒（§27.4 的教训）：页面内联 <style> 排在链接表之后，同特异性的
+   规则会**覆盖**这里的公共规则，且不会报错。要在页面里覆盖公共态，必须提高
+   特异性或用 :not() 让路，别指望顺序。
+   ========================================================================== */
+
+/* ---------- 令牌 ---------- */
+:root{
+  /* 底与面：差一档即可，不加高光、不加渐变 */
+  --bg:#0a0c0f;
+  --surface:#12151a;
+  --surface-2:#171b21;
+  --well:#0d1014;          /* 凹进去的窗：输入框、列表、读数 */
+
+  /* 描边 */
+  --line:#212832;
+  --line-2:#2c3540;
+
+  /* 文字梯度：主 / 次 / 标签 / 占位 */
+  --fg:#e7ecf3;
+  --fg-2:#b3bec9;
+  --muted:#7c8896;
+  --dim:#545f6b;
+
+  /* 强调色（仪表蓝）。语义色与它拉开：绿=正常，琥珀=待定/警示，红=故障 */
+  --accent:#4da3ff;
+  --accent-hi:#7cbcff;
+  --accent-rgb:77,163,255;
+  --ok:#3fb950;      --ok-rgb:63,185,80;   --ok-tx:#63d471;
+  --warn:#e3b341;    --warn-rgb:227,179,65;
+  --err:#f85149;     --err-rgb:248,81,73;  --err-tx:#ff8a80;
+
+  /* 圆角：控件一档、面板一档，没有第三种 */
+  --r-ctl:9px;
+  --r-card:12px;
+  --r-pill:999px;
+
+  /* 应用外壳尺寸（主页用；顶栏 / 左栏 / 底栏 / 常驻播放条） */
+  --hd-h:52px;
+  --rail-w:216px;
+  --nav-h:56px;
+  --mini-h:56px;
+
+  --tap:.15s;
+  --sans:-apple-system,system-ui,"PingFang SC","Microsoft YaHei",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
+}
+
+/* ---------- 复位与骨架 ---------- */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--sans);background:var(--bg);color:var(--fg);
+  font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent}
+.wrap{max-width:600px;margin:0 auto;padding:22px 16px 44px}
+.wrap.wide{max-width:760px}
+.foot{text-align:center;color:var(--dim);font-size:11.5px;padding-top:10px}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hi)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+input:focus-visible,select:focus-visible,textarea:focus-visible{outline:none}
+.small{font-size:12px;color:var(--muted)}
+
+/* ---------- 应用外壳：顶栏 + 内容 + 常驻条 + 导航 ---------- */
+/* 手机：内容随文档滚动（键盘弹出时浏览器能自己把输入框顶上去），
+   顶栏与底部 dock 固定。桌面：dock 转成左侧竖栏，顶栏仍横在顶上。 */
+.app{padding-top:var(--hd-h);padding-bottom:calc(var(--nav-h) + 12px);
+  min-height:100vh}
+/* 常驻播放条出现时才多留一格，否则底部白留 56px 空白。
+   宽屏 dock 是左栏，底部不挡东西，这条就不该生效。 */
+@media(max-width:899px){.app.has-mini{padding-bottom:calc(var(--nav-h) + var(--mini-h) + 12px)}}
+.hd{position:fixed;top:0;left:0;right:0;height:var(--hd-h);z-index:30;
+  display:flex;align-items:center;gap:10px;padding:0 14px;
+  background:var(--surface);border-bottom:1px solid var(--line)}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:30;
+  display:flex;flex-direction:column;background:var(--surface);
+  border-top:1px solid var(--line)}
+.body{padding:14px 14px 0}
+/* 视图切换：一次只显示一个。用 hidden 属性 + display 兜住（有些老 WebView
+   不认 [hidden] 的默认样式，被下面的 display:block 盖掉就变成全显示了） */
+.view{display:none}
+.view.on{display:block}
+[hidden]{display:none !important}
+
+@media(min-width:900px){
+  .app{padding:calc(var(--hd-h) + 22px) 26px 32px calc(var(--rail-w) + 26px)}
+  /* 左栏：导航恒在栏顶，播放条恒在栏底。DOM 顺序是 [mini, nav]（手机上播放条
+     压在导航上方），所以这里用 order 反过来，不改 HTML。
+     ⚠️ 别再用 column-reverse + space-between：只有一个可见子项时 space-between 把
+     它推到**主轴起点**，而 column-reverse 的起点是底部 —— mini 隐藏（本地没在播）
+     时整组导航就掉到左下角，mini 一出现又跳回左上，看起来就是"四个选项上下移动"。
+     正序 + mini 的 margin-top:auto 才能在两种状态下都把导航钉在左上。 */
+  .dock{top:0;bottom:0;left:0;right:auto;width:var(--rail-w);
+    flex-direction:column;justify-content:flex-start;
+    border-top:none;border-right:1px solid var(--line)}
+  /* 顶栏让开左栏：导航因此落在真正的左上角，分隔线也成一个连续的 L 形 */
+  .hd{left:var(--rail-w)}
+  .dock .nav{order:1}
+  .dock .mini{order:2;margin-top:auto}
+  .body{max-width:820px;margin:0 auto;padding:0}
+  .view{padding:0}
+}
+
+/* ---------- 顶栏内容 ---------- */
+.hd .lamp{width:9px;height:9px;border-radius:50%;flex:none;background:var(--dim)}
+.hd .lamp.ok{background:var(--ok);box-shadow:0 0 0 3px rgba(var(--ok-rgb),.16)}
+.hd .lamp.warn{background:var(--warn);box-shadow:0 0 0 3px rgba(var(--warn-rgb),.16)}
+.hd .lamp.err{background:var(--err);box-shadow:0 0 0 3px rgba(var(--err-rgb),.16)}
+.hd .name{font-size:14px;font-weight:600;letter-spacing:.2px;flex:1;min-width:0;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hd .name.is-def{color:var(--muted);font-weight:500}
+.chip{flex:none;font-size:11px;font-weight:600;letter-spacing:.6px;color:var(--fg-2);
+  background:var(--surface-2);border:1px solid var(--line-2);border-radius:var(--r-pill);
+  padding:4px 10px;white-space:nowrap}
+.chip.ok{color:var(--ok-tx);border-color:rgba(var(--ok-rgb),.34);background:rgba(var(--ok-rgb),.1)}
+.chip.warn{color:var(--warn);border-color:rgba(var(--warn-rgb),.34);background:rgba(var(--warn-rgb),.1)}
+.chip.err{color:var(--err-tx);border-color:rgba(var(--err-rgb),.34);background:rgba(var(--err-rgb),.1)}
+
+/* ---------- 底部导航 / 桌面侧栏 ---------- */
+.nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));height:var(--nav-h)}
+.nav-i{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  border:none;background:transparent;color:var(--muted);font-family:inherit;
+  font-size:10.5px;letter-spacing:.5px;cursor:pointer;position:relative;
+  transition:color var(--tap)}
+.nav-i svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.7;
+  stroke-linecap:round;stroke-linejoin:round}
+.nav-i:active{color:var(--fg)}
+/* 当前项：一条 2px 色条 + 文字变强调色。不整块反白 —— 那是「选中了一大片」，
+   在导航里读起来像误触 */
+.nav-i.on{color:var(--accent)}
+.nav-i.on::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:26px;height:2px;background:var(--accent);border-radius:0 0 2px 2px}
+.nav-i .dotmark{position:absolute;top:9px;right:24%;width:5px;height:5px;border-radius:50%;
+  background:var(--ok);display:none}
+.nav-i.busy .dotmark{display:block}
+@media(min-width:900px){
+  .nav{display:flex;flex-direction:column;gap:2px;height:auto;padding:8px}
+  .nav-i{flex-direction:row;justify-content:flex-start;gap:11px;height:42px;
+    padding:0 12px;border-radius:var(--r-ctl);font-size:13.5px;letter-spacing:0}
+  .nav-i.on{background:rgba(var(--accent-rgb),.11)}
+  .nav-i.on::before{left:0;top:50%;transform:translateY(-50%);width:2px;height:20px;
+    border-radius:0 2px 2px 0}
+  .nav-i .dotmark{top:12px;right:14px}
+}
+
+/* ---------- 常驻播放条 ---------- */
+/* 只回答「现在在放什么 / 哪路在响」，点它回播放页。没有音频在放时整条收起
+   （height 0 + hidden），不占底部空间。 */
+.mini{display:none;align-items:center;gap:11px;height:var(--mini-h);padding:0 12px;
+  border-top:1px solid var(--line);cursor:pointer;min-width:0}
+.mini.on{display:flex}
+.mini .lamp{width:8px;height:8px;border-radius:50%;flex:none;background:var(--dim)}
+.mini.playing .lamp{background:var(--ok);box-shadow:0 0 0 3px rgba(var(--ok-rgb),.16);
+  animation:pulse 2.4s ease-in-out infinite}
+.mini .txt{flex:1;min-width:0}
+.mini .t{font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini .s{font-size:11px;color:var(--muted);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini .src{flex:none;font-size:10px;letter-spacing:.6px;color:var(--fg-2);
+  border:1px solid var(--line-2);border-radius:var(--r-pill);padding:2px 8px}
+@media(min-width:900px){
+  .mini{height:auto;min-height:var(--mini-h);padding:12px;border-top:1px solid var(--line);
+    border-left:none}
+}
+
+/* ---------- 分组（内容里的"一段"） ---------- */
+/* 移动档不画外壳（一屏一段，框是多余的）；宽屏内容区变宽后才用描边收束。
+   这是 §29 的结论：窄屏套壳会变成一整个几千像素高的大框。 */
+.grp{padding:18px 0}
+.grp+.grp{border-top:1px solid var(--line)}
+.grp>h2{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;
+  color:var(--muted);letter-spacing:1.1px;text-transform:uppercase;margin-bottom:13px}
+.grp>h2 svg{width:14px;height:14px;flex:none;stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+.grp>h2 .tag{margin-left:auto;font-size:11px;font-weight:500;color:var(--dim);
+  letter-spacing:0;text-transform:none;font-family:var(--mono)}
+.grp .desc{font-size:12.5px;color:var(--muted);margin:-7px 0 13px;line-height:1.6}
+.grp .desc b{color:var(--fg-2);font-weight:600}
+@media(min-width:900px){
+  .grp{padding:20px 22px;border:1px solid var(--line);border-radius:var(--r-card);
+    background:var(--surface);margin-bottom:14px}
+  .grp+.grp{border-top:1px solid var(--line)}
+}
+
+/* ---------- 卡片（只给"小节会整块隐藏"的页面：eq） ---------- */
+/* eq 页的小节会被功能探测整块 display:none。发丝线用的是 .grp+.grp ——
+   相邻兄弟选择器不看 display，前一段被隐藏时"第一个可见段"仍会带上顶线，
+   留下一条悬空的线；纯 CSS 没有"第一个可见子元素"这种选择器。那种页面里
+   一张张独立卡片才是正确的容器语义。主页/测速页已改成上面的 .grp。 */
+.card{padding:20px;border:1px solid var(--line);border-radius:var(--r-card);
+  background:var(--surface);margin-bottom:14px}
+.card h2{display:flex;align-items:center;gap:9px;font-size:12px;font-weight:600;
+  color:var(--muted);letter-spacing:1.1px;text-transform:uppercase;margin-bottom:14px}
+.card h2 svg{width:15px;height:15px;flex:none;stroke:currentColor;fill:none;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;opacity:.75}
+.card h2 .tag{margin-left:auto;font-size:11px;font-weight:500;color:var(--dim);
+  letter-spacing:0;text-transform:none;font-family:var(--mono)}
+.card .desc{font-size:12.5px;color:var(--muted);margin:-8px 0 14px;line-height:1.6}
+
+/* 工具页（logs / speedtest）沿用的连续面板：一段一条发丝线，不套壳 */
+.panel{position:relative}
+.blk{padding:18px 0}
+.blk+.blk{border-top:1px solid var(--line)}
+.blk>h2{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;
+  color:var(--muted);letter-spacing:1.1px;text-transform:uppercase;margin-bottom:13px}
+.blk>h2 .tag{margin-left:auto;font-size:11px;font-weight:500;color:var(--dim);
+  letter-spacing:0;text-transform:none;font-family:var(--mono)}
+.blk .desc{font-size:12.5px;color:var(--muted);margin:-7px 0 13px;line-height:1.6}
+@media(min-width:900px){
+  .panel{border:1px solid var(--line);border-radius:var(--r-card);background:var(--surface);
+    padding:0 22px}
+  .blk{padding:20px 0}
+}
+
+.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.hint{color:var(--muted);font-size:12px;margin-top:6px;line-height:1.6}
+
+/* ---------- 分段选择器（源切换 / SD 与网络音乐） ---------- */
+.seg{display:flex;gap:2px;padding:3px;background:var(--well);border:1px solid var(--line);
+  border-radius:var(--r-ctl);margin-bottom:14px}
+.seg button{flex:1;min-height:34px;border:none;background:transparent;color:var(--muted);
+  font-family:inherit;font-size:13px;font-weight:500;border-radius:6px;cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  transition:background var(--tap),color var(--tap)}
+.seg button svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;
+  stroke-linecap:round;stroke-linejoin:round}
+.seg button:hover{color:var(--fg-2)}
+.seg button.on{background:var(--surface-2);color:var(--fg);box-shadow:inset 0 0 0 1px var(--line-2)}
+
+/* ---------- 表单 ---------- */
+.form-group{margin-bottom:14px}
+.form-group label,.field>label{display:block;font-size:11px;color:var(--muted);
+  margin-bottom:6px;letter-spacing:.9px;text-transform:uppercase}
+input[type=text],input[type=password],input[type=number],select{width:100%;
+  min-height:42px;padding:11px 13px;background:var(--well);border:1px solid var(--line-2);
+  border-radius:var(--r-ctl);color:var(--fg);font-size:14px;font-family:inherit;
+  transition:border-color var(--tap),box-shadow var(--tap)}
+input[type=text],input[type=password]{font-family:var(--mono);font-size:13.5px}
+input::placeholder{color:var(--dim);font-family:var(--sans)}
+input:focus,select:focus{border-color:rgba(var(--accent-rgb),.7);
+  box-shadow:0 0 0 3px rgba(var(--accent-rgb),.13)}
+select{appearance:none;-webkit-appearance:none;cursor:pointer;padding-right:36px;
+  font-family:var(--sans);
+  background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c8896' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 12px center;background-size:16px}
+option{background:#12151a;color:var(--fg)}
+
+/* ---------- 按钮 ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  min-height:42px;padding:11px 17px;border:1px solid transparent;border-radius:var(--r-ctl);
+  font-size:14px;font-weight:500;font-family:inherit;cursor:pointer;color:var(--fg);
+  background:var(--surface-2);white-space:nowrap;
+  transition:border-color var(--tap),background var(--tap),color var(--tap),opacity var(--tap)}
+.btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.9;
+  stroke-linecap:round;stroke-linejoin:round}
+.btn:hover{border-color:var(--line-2);background:#1c2129}
+.btn:active{background:var(--surface)}
+.btn:disabled{opacity:.35;cursor:not-allowed}
+/* 主操作：实心强调底。一屏最多一个 —— 到处都在强调等于没强调 */
+.btn-primary{background:var(--accent);border-color:var(--accent);color:#06131f;font-weight:600}
+.btn-primary:hover{background:var(--accent-hi);border-color:var(--accent-hi)}
+.btn-primary:active{background:var(--accent)}
+.btn-danger{color:var(--err-tx);border-color:rgba(var(--err-rgb),.35);background:rgba(var(--err-rgb),.1)}
+.btn-danger:hover{background:rgba(var(--err-rgb),.18);border-color:rgba(var(--err-rgb),.5)}
+.btn-block{width:100%;margin-top:10px}
+.btn-sm{min-height:32px;padding:5px 11px;font-size:12px;border-radius:7px}
+/* 图标按钮（播放条上的） */
+.btn-ico{width:44px;height:44px;min-height:44px;padding:0;border-radius:50%;flex:none;
+  background:transparent;border:1px solid var(--line-2);color:var(--fg-2)}
+.btn-ico:hover{background:var(--surface-2);color:var(--fg)}
+.btn-ico svg{width:18px;height:18px}
+.btn-ico.lg{width:56px;height:56px;min-height:56px;background:var(--surface-2)}
+.btn-ico.lg svg{width:22px;height:22px}
+.btn-ico:disabled{opacity:.3}
+.row{display:flex;gap:10px;flex-wrap:wrap}
+.row .btn{flex:1}
+
+/* ---------- 状态点（旧页面还在用） ---------- */
+.dot{width:10px;height:10px;border-radius:50%;flex:none;background:var(--dim)}
+.dot.ok{background:var(--ok);box-shadow:0 0 0 3px rgba(var(--ok-rgb),.16);
+  animation:pulse 2.4s ease-in-out infinite}
+.dot.warn{background:var(--warn);box-shadow:0 0 0 3px rgba(var(--warn-rgb),.16)}
+.dot.err{background:var(--err);box-shadow:0 0 0 3px rgba(var(--err-rgb),.16)}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(var(--ok-rgb),.16)}
+  50%{box-shadow:0 0 0 7px rgba(var(--ok-rgb),0)}}
+
+/* ---------- 读数网格（系统状态） ---------- */
+/* 标签上、值下，两列起；值一律等宽，跳动最小。拍平不套壳 —— 壳里再嵌小块
+   就是「框中框」，§29.3 已经否掉过一次 */
+.kvs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.kv{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.045);min-width:0}
+.kv:nth-last-child(-n+2){border-bottom:none}
+.kv .k{font-size:10.5px;color:var(--dim);letter-spacing:.9px;text-transform:uppercase;margin-bottom:3px}
+.kv .v{font-size:13.5px;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kv .v.ok{color:var(--ok-tx)}.kv .v.err{color:var(--err-tx)}.kv .v.warn{color:var(--warn)}
+@media(min-width:560px){.kvs{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:1100px){.kvs{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* 工具页里"标签 —— 值"横排的一种（speedtest 统计） */
+.kvline{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
+  padding:8px 0;font-size:13px;border-bottom:1px solid rgba(255,255,255,.045)}
+.kvline:last-child{border-bottom:none}
+.kvline .k{color:var(--muted)}
+.kvline .v{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+
+/* ---------- 滑块行（只放布局；轨道在主页专属样式里） ---------- */
+.slider-row{display:flex;align-items:center;gap:14px}
+.slider-row input[type=range]{flex:1;min-width:0;accent-color:var(--accent);height:32px}
+.slider-row>span{font-size:13px;color:var(--fg-2);min-width:48px;text-align:right;
+  font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+
+/* ---------- 标签页 / 徽章 / 进度条 ---------- */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.tab{min-height:34px;display:inline-flex;align-items:center;background:var(--well);
+  border:1px solid var(--line);border-radius:7px;color:var(--muted);
+  padding:7px 12px;font-size:12px;font-family:inherit;cursor:pointer;
+  transition:background var(--tap),color var(--tap),border-color var(--tap)}
+.tab:hover{background:var(--surface-2);color:var(--fg-2)}
+.tab.on{background:rgba(var(--accent-rgb),.13);border-color:rgba(var(--accent-rgb),.45);
+  color:var(--accent-hi);font-weight:500}
+.badge{display:inline-block;font-size:11px;color:var(--muted);background:var(--surface-2);
+  border:1px solid var(--line);border-radius:var(--r-pill);padding:1px 8px;vertical-align:1px;
+  font-family:var(--mono)}
+.bar{height:6px;background:var(--well);border:1px solid var(--line);
+  border-radius:var(--r-pill);overflow:hidden;margin-top:8px}
+.bar>div{height:100%;background:var(--accent);width:0%;transition:width .1s linear}
+
+/* ---------- 提示条 ---------- */
+/* 文案一律 textContent（服务器回显的是原始字符串，含文件名/URL）。
+   见 app.js 的 msg()。 */
+.msg{padding:10px 13px;border-radius:var(--r-ctl);margin-top:12px;font-size:13px;
+  border:1px solid var(--line-2);background:var(--surface-2);color:var(--fg-2);
+  animation:fadein .18s ease}
+.msg.ok{background:rgba(var(--ok-rgb),.11);border-color:rgba(var(--ok-rgb),.32);color:var(--ok-tx)}
+.msg.err{background:rgba(var(--err-rgb),.11);border-color:rgba(var(--err-rgb),.34);color:var(--err-tx)}
+.msg.info{background:var(--surface-2);border-color:var(--line-2);color:var(--fg-2)}
+@keyframes fadein{from{opacity:0;transform:translateY(-3px)}to{opacity:1;transform:none}}
+
+/* ---------- 工具页顶栏（logs 这类整屏页） ---------- */
+.toolbar{display:flex;align-items:center;gap:10px;padding:10px 12px;
+  background:var(--surface);border:1px solid var(--line);border-radius:var(--r-card)}
+.toolbar h1{font-size:14px;font-weight:600;flex:1;letter-spacing:.3px}
+.toolbar a{font-size:13px;display:inline-flex;align-items:center;min-height:34px;padding:0 8px;
+  color:var(--fg-2)}
+.toolbar a:hover{color:var(--fg)}
+
+/* ---------- 滚动条 ---------- */
+*{scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.14) transparent}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:var(--r-pill)}
+::-webkit-scrollbar-track{background:transparent}
+
+@media(max-width:400px){
+  .card{padding:16px}
+  .wrap{padding:18px 13px 40px}
+}
