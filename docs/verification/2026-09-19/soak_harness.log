@@ -1,0 +1,822 @@
+[16:30:40] PASS harness up: station on 192.0.2.9:8899, 70 minutes
+[16:30:40] PASS --- loop 1 --- uptime=298 heap=6212699 src=airplay ap=standby
+[16:30:51] PASS loop 1 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:30:51] SERVED /live.mp3
+[16:31:01] PASS loop 1 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:31:02] PASS loop 1 volume extremes + restore | set->get [0, 100, 33, 33] expected [0, 100, 33, 33]
+[16:31:03] PASS loop 1 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:31:04] PASS loop 1 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:31:05] PASS loop 1 misc endpoints | reset=software np=standby fs=7 entries, sensor_age=1 synced=True
+[16:31:08] PASS loop 1 wifi scan | 4 networks
+[16:31:08] PASS loop 1 speedtest ping | body='ok'
+[16:31:08] PASS loop 1 done in 27s: heap 6212699 -> 6212903 (+204), uptime=325, sensor 31.5C/52%
+[16:31:28] PASS --- loop 2 --- uptime=346 heap=6210775 src=airplay ap=standby
+[16:31:39] PASS loop 2 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:31:39] SERVED /live.mp3
+[16:31:49] PASS loop 2 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:31:50] PASS loop 2 volume extremes + restore | set->get [0, 100, 33, 33] expected [0, 100, 33, 33]
+[16:31:51] PASS loop 2 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:31:52] PASS loop 2 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:31:54] PASS loop 2 misc endpoints | reset=software np=standby fs=7 entries, sensor_age=2 synced=True
+[16:31:54] PASS loop 2 done in 25s: heap 6210775 -> 6213007 (+2232), uptime=371, sensor 31.6C/52%
+[16:32:14] PASS --- loop 3 --- uptime=392 heap=6210655 src=airplay ap=standby
+[16:32:25] PASS loop 3 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:32:25] SERVED /live.mp3
+[16:32:35] PASS loop 3 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:32:36] PASS loop 3 volume extremes + restore | set->get [0, 100, 33, 33] expected [0, 100, 33, 33]
+[16:32:37] PASS loop 3 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:32:38] PASS loop 3 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:32:39] PASS loop 3 misc endpoints | reset=software np=standby fs=7 entries, sensor_age=0 synced=True
+[16:32:39] PASS loop 3 done in 25s: heap 6210655 -> 6212603 (+1948), uptime=417, sensor 31.7C/52%
+[16:32:59] PASS --- loop 4 --- uptime=437 heap=6209015 src=airplay ap=standby
+[16:33:10] PASS loop 4 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:33:10] SERVED /live.mp3
+[16:33:20] PASS loop 4 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:33:21] PASS loop 4 volume extremes + restore | set->get [0, 100, 33, 33] expected [0, 100, 33, 33]
+[16:33:22] PASS loop 4 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:33:23] PASS loop 4 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:33:24] PASS loop 4 misc endpoints | reset=software np=standby fs=7 entries, sensor_age=4 synced=True
+[16:33:24] PASS loop 4 done in 25s: heap 6209015 -> 6212623 (+3608), uptime=462, sensor 31.9C/52%
+[16:33:44] PASS --- loop 5 --- uptime=482 heap=6210519 src=airplay ap=standby
+[16:33:56] PASS loop 5 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:33:56] SERVED /live.mp3
+[16:34:06] PASS loop 5 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:34:06] PASS loop 5 volume extremes + restore | set->get [0, 100, 33, 33] expected [0, 100, 33, 33]
+[16:34:07] PASS loop 5 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:34:08] PASS loop 5 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:34:09] PASS loop 5 misc endpoints | reset=software np=standby fs=7 entries, sensor_age=2 synced=True
+[16:34:12] PASS loop 5 wifi scan | 3 networks
+[16:34:12] PASS loop 5 done in 28s: heap 6210519 -> 6212587 (+2068), uptime=510, sensor 31.8C/52%
+[16:34:32] PASS --- loop 6 --- uptime=530 heap=6212383 src=airplay ap=standby
+[16:34:44] PASS loop 6 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:34:44] SERVED /live.mp3
+[16:34:54] PASS loop 6 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:34:55] PASS loop 6 volume extremes + restore | set->get [0, 100, 33, 33] expected [0, 100, 33, 33]
+[16:34:55] PASS loop 6 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:34:56] PASS loop 6 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:34:58] PASS loop 6 misc endpoints | reset=software np=standby fs=7 entries, sensor_age=3 synced=True
+[16:34:58] PASS loop 6 done in 25s: heap 6212383 -> 6212615 (+232), uptime=555, sensor 31.9C/52%
+[16:35:54] FAIL REBOOT detected | uptime 530 -> 12 reset_reason=usb
+[16:35:54] PASS --- loop 7 --- uptime=12 heap=6212183 src=airplay ap=standby
+[16:36:06] PASS loop 7 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:36:06] SERVED /live.mp3
+[16:36:16] PASS loop 7 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:36:16] PASS loop 7 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:36:17] PASS loop 7 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:36:18] PASS loop 7 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:36:19] PASS loop 7 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[16:36:19] PASS loop 7 done in 61s: heap 6212183 -> 6212703 (+520), uptime=37, sensor 31.9C/52%
+[16:36:39] PASS --- loop 8 --- uptime=57 heap=6212327 src=airplay ap=standby
+[16:36:51] PASS loop 8 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:36:51] SERVED /live.mp3
+[16:36:54] SERVED /live.mp3
+[16:37:02] PASS loop 8 radio live stream + skip + handback | playing=True after_next=idle stopped=idle src=airplay err=-
+[16:37:02] PASS loop 8 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:37:03] PASS loop 8 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:37:04] PASS loop 8 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:37:05] PASS loop 8 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:37:05] PASS loop 8 done in 26s: heap 6212327 -> 6212595 (+268), uptime=83, sensor 31.6C/52%
+[16:37:26] PASS --- loop 9 --- uptime=103 heap=6212279 src=airplay ap=standby
+[16:37:37] PASS loop 9 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:37:37] SERVED /live.mp3
+[16:37:47] PASS loop 9 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:37:48] PASS loop 9 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:37:48] PASS loop 9 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:37:52] PASS loop 9 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:37:53] PASS loop 9 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:37:56] PASS loop 9 wifi scan | 2 networks
+[16:37:56] PASS loop 9 speedtest ping | body='ok'
+[16:37:56] PASS loop 9 done in 30s: heap 6212279 -> 6212515 (+236), uptime=134, sensor 31.8C/52%
+[16:38:16] PASS --- loop 10 --- uptime=154 heap=6212187 src=airplay ap=standby
+[16:38:27] PASS loop 10 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:38:27] SERVED /live.mp3
+[16:38:37] PASS loop 10 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:38:38] PASS loop 10 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:38:39] PASS loop 10 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:38:40] PASS loop 10 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:38:41] PASS loop 10 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[16:38:41] PASS loop 10 done in 25s: heap 6212187 -> 6212743 (+556), uptime=179, sensor 31.8C/52%
+[16:39:01] PASS --- loop 11 --- uptime=199 heap=6212339 src=airplay ap=standby
+[16:39:12] PASS loop 11 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:39:12] SERVED /live.mp3
+[16:39:22] PASS loop 11 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:39:23] PASS loop 11 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:39:24] PASS loop 11 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:39:25] PASS loop 11 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:39:26] PASS loop 11 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[16:39:26] PASS loop 11 done in 25s: heap 6212339 -> 6212739 (+400), uptime=224, sensor 31.7C/52%
+[16:39:46] PASS --- loop 12 --- uptime=244 heap=6212771 src=airplay ap=standby
+[16:39:58] PASS loop 12 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:39:58] SERVED /live.mp3
+[16:40:08] PASS loop 12 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:40:08] PASS loop 12 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:40:09] PASS loop 12 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:40:10] PASS loop 12 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:40:11] PASS loop 12 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=5 synced=True
+[16:40:11] PASS loop 12 done in 25s: heap 6212771 -> 6212615 (-156), uptime=269, sensor 31.8C/52%
+[16:40:32] PASS --- loop 13 --- uptime=289 heap=6212635 src=airplay ap=standby
+[16:40:43] PASS loop 13 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:40:43] SERVED /live.mp3
+[16:40:53] PASS loop 13 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:40:54] PASS loop 13 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:40:54] PASS loop 13 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:40:56] PASS loop 13 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:40:57] PASS loop 13 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[16:41:00] PASS loop 13 wifi scan | 3 networks
+[16:41:00] PASS loop 13 done in 28s: heap 6212635 -> 6202575 (-10060), uptime=317, sensor 31.9C/52%
+[16:41:20] PASS --- loop 14 --- uptime=338 heap=6212191 src=airplay ap=standby
+[16:41:31] PASS loop 14 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:41:31] SERVED /live.mp3
+[16:41:41] PASS loop 14 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:41:42] PASS loop 14 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:41:43] PASS loop 14 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:41:44] PASS loop 14 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:41:45] PASS loop 14 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[16:41:45] PASS loop 14 done in 25s: heap 6212191 -> 6212619 (+428), uptime=363, sensor 31.8C/52%
+[16:42:05] PASS --- loop 15 --- uptime=383 heap=6212183 src=airplay ap=standby
+[16:42:16] PASS loop 15 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:42:16] SERVED /live.mp3
+[16:42:26] PASS loop 15 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:42:27] PASS loop 15 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:42:28] PASS loop 15 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:42:29] PASS loop 15 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:42:30] PASS loop 15 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:42:30] PASS loop 15 done in 25s: heap 6212183 -> 6212595 (+412), uptime=408, sensor 31.6C/52%
+[16:42:50] PASS --- loop 16 --- uptime=428 heap=6212607 src=airplay ap=standby
+[16:43:02] PASS loop 16 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:43:02] SERVED /live.mp3
+[16:43:12] PASS loop 16 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:43:12] PASS loop 16 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:43:13] PASS loop 16 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:43:14] PASS loop 16 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:43:15] PASS loop 16 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:43:16] PASS loop 16 done in 25s: heap 6212607 -> 6212599 (-8), uptime=453, sensor 32.1C/52%
+[16:43:36] PASS --- loop 17 --- uptime=474 heap=6212599 src=airplay ap=standby
+[16:43:47] PASS loop 17 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:43:47] SERVED /live.mp3
+[16:43:57] PASS loop 17 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:43:58] PASS loop 17 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:43:59] PASS loop 17 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:44:00] PASS loop 17 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:44:01] PASS loop 17 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[16:44:04] PASS loop 17 wifi scan | 4 networks
+[16:44:04] PASS loop 17 speedtest ping | body='ok'
+[16:44:04] PASS loop 17 done in 28s: heap 6212599 -> 6212431 (-168), uptime=502, sensor 31.8C/52%
+[16:44:24] PASS --- loop 18 --- uptime=522 heap=6212411 src=airplay ap=standby
+[16:44:36] PASS loop 18 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:44:36] SERVED /live.mp3
+[16:44:46] PASS loop 18 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:44:46] PASS loop 18 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:44:47] PASS loop 18 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:44:48] PASS loop 18 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:44:49] PASS loop 18 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:44:49] PASS loop 18 done in 25s: heap 6212411 -> 6212635 (+224), uptime=547, sensor 31.8C/52%
+[16:45:10] PASS --- loop 19 --- uptime=567 heap=6212207 src=airplay ap=standby
+[16:45:21] PASS loop 19 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:45:21] SERVED /live.mp3
+[16:45:31] PASS loop 19 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:45:32] PASS loop 19 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:45:33] PASS loop 19 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:45:34] PASS loop 19 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:45:35] PASS loop 19 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[16:45:35] PASS loop 19 done in 25s: heap 6212207 -> 6212623 (+416), uptime=593, sensor 31.8C/52%
+[16:45:55] PASS --- loop 20 --- uptime=613 heap=6210871 src=airplay ap=standby
+[16:46:06] PASS loop 20 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:46:06] SERVED /live.mp3
+[16:46:16] PASS loop 20 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:46:17] PASS loop 20 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:46:18] PASS loop 20 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:46:19] PASS loop 20 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:46:20] PASS loop 20 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[16:46:20] PASS loop 20 done in 25s: heap 6210871 -> 6212431 (+1560), uptime=638, sensor 32.2C/51%
+[16:46:40] PASS --- loop 21 --- uptime=658 heap=6212431 src=airplay ap=standby
+[16:46:52] PASS loop 21 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:46:52] SERVED /live.mp3
+[16:47:02] PASS loop 21 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:47:03] PASS loop 21 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:47:03] PASS loop 21 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:47:05] PASS loop 21 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:47:06] PASS loop 21 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:47:09] PASS loop 21 wifi scan | 3 networks
+[16:47:09] PASS loop 21 done in 28s: heap 6212431 -> 6212631 (+200), uptime=686, sensor 32.2C/51%
+[16:47:29] PASS --- loop 22 --- uptime=707 heap=6212307 src=airplay ap=standby
+[16:47:40] PASS loop 22 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:47:40] SERVED /live.mp3
+[16:47:50] PASS loop 22 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:47:51] PASS loop 22 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:47:52] PASS loop 22 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:47:53] PASS loop 22 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:47:54] PASS loop 22 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[16:47:54] PASS loop 22 done in 25s: heap 6212307 -> 6212611 (+304), uptime=732, sensor 31.8C/52%
+[16:48:14] PASS --- loop 23 --- uptime=752 heap=6212087 src=airplay ap=standby
+[16:48:25] PASS loop 23 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:48:25] SERVED /live.mp3
+[16:48:36] PASS loop 23 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:48:36] PASS loop 23 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:48:37] PASS loop 23 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:48:38] PASS loop 23 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:48:39] PASS loop 23 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[16:48:39] PASS loop 23 done in 25s: heap 6212087 -> 6212387 (+300), uptime=777, sensor 32.2C/51%
+[16:49:00] PASS --- loop 24 --- uptime=797 heap=6212147 src=airplay ap=standby
+[16:49:11] PASS loop 24 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:49:11] SERVED /live.mp3
+[16:49:21] PASS loop 24 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:49:22] PASS loop 24 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:49:23] PASS loop 24 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:49:24] PASS loop 24 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:49:25] PASS loop 24 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:49:25] PASS loop 24 done in 25s: heap 6212147 -> 6212583 (+436), uptime=823, sensor 31.8C/52%
+[16:49:45] PASS --- loop 25 --- uptime=843 heap=6212391 src=airplay ap=standby
+[16:49:56] PASS loop 25 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:49:56] SERVED /live.mp3
+[16:50:06] PASS loop 25 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:50:07] PASS loop 25 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:50:08] PASS loop 25 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:50:09] PASS loop 25 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:50:10] PASS loop 25 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:50:13] PASS loop 25 wifi scan | 4 networks
+[16:50:13] PASS loop 25 speedtest ping | body='ok'
+[16:50:13] PASS loop 25 done in 28s: heap 6212391 -> 6212639 (+248), uptime=871, sensor 31.9C/52%
+[16:50:33] PASS --- loop 26 --- uptime=891 heap=6212119 src=airplay ap=standby
+[16:50:45] PASS loop 26 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:50:45] SERVED /live.mp3
+[16:50:55] PASS loop 26 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:50:55] PASS loop 26 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:50:56] PASS loop 26 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:50:57] PASS loop 26 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:50:58] PASS loop 26 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[16:50:59] PASS loop 26 done in 25s: heap 6212119 -> 6211083 (-1036), uptime=916, sensor 32.0C/52%
+[16:51:19] PASS --- loop 27 --- uptime=936 heap=6212063 src=airplay ap=standby
+[16:51:30] PASS loop 27 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:51:30] SERVED /live.mp3
+[16:51:40] PASS loop 27 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:51:41] PASS loop 27 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:51:42] PASS loop 27 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:51:43] PASS loop 27 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:51:44] PASS loop 27 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=5 synced=True
+[16:51:44] PASS loop 27 done in 25s: heap 6212063 -> 6212615 (+552), uptime=962, sensor 32.0C/52%
+[16:52:04] PASS --- loop 28 --- uptime=982 heap=6207495 src=airplay ap=standby
+[16:52:15] PASS loop 28 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:52:15] SERVED /live.mp3
+[16:52:25] PASS loop 28 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:52:26] PASS loop 28 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:52:27] PASS loop 28 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:52:28] PASS loop 28 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:52:29] PASS loop 28 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:52:29] PASS loop 28 done in 25s: heap 6207495 -> 6212595 (+5100), uptime=1007, sensor 31.9C/52%
+[16:52:49] PASS --- loop 29 --- uptime=1027 heap=6212395 src=airplay ap=standby
+[16:53:01] PASS loop 29 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:53:01] SERVED /live.mp3
+[16:53:11] PASS loop 29 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:53:12] PASS loop 29 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:53:12] PASS loop 29 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:53:14] PASS loop 29 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:53:15] PASS loop 29 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:53:18] PASS loop 29 wifi scan | 3 networks
+[16:53:18] PASS loop 29 done in 28s: heap 6212395 -> 6212191 (-204), uptime=1055, sensor 31.7C/52%
+[16:53:38] PASS --- loop 30 --- uptime=1075 heap=6211863 src=airplay ap=standby
+[16:53:49] PASS loop 30 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:53:49] SERVED /live.mp3
+[16:53:59] PASS loop 30 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:54:00] PASS loop 30 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:54:01] PASS loop 30 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:54:02] PASS loop 30 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:54:03] PASS loop 30 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[16:54:03] PASS loop 30 done in 25s: heap 6211863 -> 6212371 (+508), uptime=1101, sensor 31.8C/52%
+[16:54:23] PASS --- loop 31 --- uptime=1121 heap=6212375 src=airplay ap=standby
+[16:54:34] PASS loop 31 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:54:34] SERVED /live.mp3
+[16:54:44] PASS loop 31 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:54:45] PASS loop 31 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:54:46] PASS loop 31 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:54:47] PASS loop 31 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:54:48] PASS loop 31 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:54:48] PASS loop 31 done in 25s: heap 6212375 -> 6212611 (+236), uptime=1146, sensor 31.8C/52%
+[16:55:09] PASS --- loop 32 --- uptime=1166 heap=6212199 src=airplay ap=standby
+[16:55:20] PASS loop 32 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:55:20] SERVED /live.mp3
+[16:55:30] PASS loop 32 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:55:31] PASS loop 32 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:55:31] PASS loop 32 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:55:33] PASS loop 32 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:55:34] PASS loop 32 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[16:55:34] PASS loop 32 done in 25s: heap 6212199 -> 6212411 (+212), uptime=1191, sensor 31.7C/52%
+[16:55:54] PASS --- loop 33 --- uptime=1212 heap=6212075 src=airplay ap=standby
+[16:56:05] PASS loop 33 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:56:05] SERVED /live.mp3
+[16:56:15] PASS loop 33 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:56:16] PASS loop 33 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:56:17] PASS loop 33 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:56:18] PASS loop 33 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:56:19] PASS loop 33 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[16:56:22] PASS loop 33 wifi scan | 4 networks
+[16:56:22] PASS loop 33 speedtest ping | body='ok'
+[16:56:22] PASS loop 33 done in 28s: heap 6212075 -> 6212635 (+560), uptime=1240, sensor 31.8C/52%
+[16:56:42] PASS --- loop 34 --- uptime=1260 heap=6212663 src=airplay ap=standby
+[16:56:53] PASS loop 34 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:56:53] SERVED /live.mp3
+[16:57:04] PASS loop 34 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:57:04] PASS loop 34 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:57:05] PASS loop 34 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:57:06] PASS loop 34 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:57:07] PASS loop 34 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:57:07] PASS loop 34 done in 25s: heap 6212663 -> 6212619 (-44), uptime=1285, sensor 31.7C/52%
+[16:57:27] PASS --- loop 35 --- uptime=1305 heap=6212415 src=airplay ap=standby
+[16:57:39] PASS loop 35 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:57:39] SERVED /live.mp3
+[16:57:49] PASS loop 35 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:57:50] PASS loop 35 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:57:50] PASS loop 35 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:57:51] PASS loop 35 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:57:52] PASS loop 35 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[16:57:53] PASS loop 35 done in 25s: heap 6212415 -> 6211095 (-1320), uptime=1330, sensor 31.7C/52%
+[16:58:13] PASS --- loop 36 --- uptime=1350 heap=6212095 src=airplay ap=standby
+[16:58:24] PASS loop 36 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:58:24] SERVED /live.mp3
+[16:58:34] PASS loop 36 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:58:35] PASS loop 36 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:58:36] PASS loop 36 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:58:37] PASS loop 36 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:58:38] PASS loop 36 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[16:58:38] PASS loop 36 done in 25s: heap 6212095 -> 6212631 (+536), uptime=1376, sensor 31.6C/52%
+[16:58:58] PASS --- loop 37 --- uptime=1396 heap=6212431 src=airplay ap=standby
+[16:59:09] PASS loop 37 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[16:59:10] SERVED /live.mp3
+[16:59:20] PASS loop 37 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[16:59:42] PASS loop 37 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[16:59:43] PASS loop 37 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[16:59:44] PASS loop 37 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[16:59:45] PASS loop 37 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[16:59:48] PASS loop 37 wifi scan | 3 networks
+[16:59:48] PASS loop 37 done in 49s: heap 6212431 -> 6212419 (-12), uptime=1446, sensor 31.8C/52%
+[17:00:08] PASS --- loop 38 --- uptime=1466 heap=6212207 src=airplay ap=standby
+[17:00:19] PASS loop 38 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:00:19] SERVED /live.mp3
+[17:00:29] PASS loop 38 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:00:30] PASS loop 38 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:00:31] PASS loop 38 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:00:32] PASS loop 38 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:00:33] PASS loop 38 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:00:33] PASS loop 38 done in 25s: heap 6212207 -> 6212407 (+200), uptime=1491, sensor 31.8C/52%
+[17:00:53] PASS --- loop 39 --- uptime=1511 heap=6211863 src=airplay ap=standby
+[17:01:04] PASS loop 39 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:01:04] SERVED /live.mp3
+[17:01:36] PASS loop 39 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:01:37] PASS loop 39 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:01:38] PASS loop 39 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:01:39] PASS loop 39 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:01:40] PASS loop 39 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:01:40] PASS loop 39 done in 46s: heap 6211863 -> 6212415 (+552), uptime=1558, sensor 31.6C/52%
+[17:02:00] PASS --- loop 40 --- uptime=1578 heap=6212175 src=airplay ap=standby
+[17:02:11] PASS loop 40 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:02:11] SERVED /live.mp3
+[17:02:21] PASS loop 40 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:02:22] PASS loop 40 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:02:23] PASS loop 40 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:02:24] PASS loop 40 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:02:25] PASS loop 40 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:02:25] PASS loop 40 done in 25s: heap 6212175 -> 6212635 (+460), uptime=1603, sensor 31.8C/52%
+[17:02:45] PASS --- loop 41 --- uptime=1623 heap=6212387 src=airplay ap=standby
+[17:02:57] PASS loop 41 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:02:57] SERVED /live.mp3
+[17:03:07] PASS loop 41 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:03:07] PASS loop 41 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:03:08] PASS loop 41 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:03:09] PASS loop 41 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:03:10] PASS loop 41 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:03:13] PASS loop 41 wifi scan | 4 networks
+[17:03:13] PASS loop 41 speedtest ping | body='ok'
+[17:03:14] PASS loop 41 done in 28s: heap 6212387 -> 6212643 (+256), uptime=1651, sensor 31.7C/52%
+[17:03:34] PASS --- loop 42 --- uptime=1671 heap=6212279 src=airplay ap=standby
+[17:03:45] PASS loop 42 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:03:45] SERVED /live.mp3
+[17:03:55] PASS loop 42 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:03:56] PASS loop 42 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:03:57] PASS loop 42 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:03:58] PASS loop 42 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:03:59] PASS loop 42 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=5 synced=True
+[17:04:00] PASS loop 42 done in 26s: heap 6212279 -> 6212167 (-112), uptime=1698, sensor 31.5C/53%
+[17:04:20] PASS --- loop 43 --- uptime=1718 heap=6210355 src=airplay ap=standby
+[17:04:32] PASS loop 43 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:04:32] SERVED /live.mp3
+[17:04:42] PASS loop 43 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:04:43] PASS loop 43 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:04:43] PASS loop 43 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:04:45] PASS loop 43 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:04:46] PASS loop 43 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:04:46] PASS loop 43 done in 25s: heap 6210355 -> 6212391 (+2036), uptime=1743, sensor 31.7C/53%
+[17:05:06] PASS --- loop 44 --- uptime=1764 heap=6212099 src=airplay ap=standby
+[17:05:17] PASS loop 44 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:05:17] SERVED /live.mp3
+[17:05:27] PASS loop 44 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:05:28] PASS loop 44 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:05:29] PASS loop 44 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:05:30] PASS loop 44 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:05:31] PASS loop 44 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:05:31] PASS loop 44 done in 25s: heap 6212099 -> 6212655 (+556), uptime=1789, sensor 32.2C/51%
+[17:05:51] PASS --- loop 45 --- uptime=1809 heap=6212631 src=airplay ap=standby
+[17:06:03] PASS loop 45 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:06:03] SERVED /live.mp3
+[17:06:13] PASS loop 45 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:06:13] PASS loop 45 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:06:14] PASS loop 45 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:06:15] PASS loop 45 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:06:16] PASS loop 45 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:06:19] PASS loop 45 wifi scan | 4 networks
+[17:06:20] PASS loop 45 done in 28s: heap 6212631 -> 6212635 (+4), uptime=1837, sensor 32.1C/51%
+[17:06:40] PASS --- loop 46 --- uptime=1857 heap=6212407 src=airplay ap=standby
+[17:06:51] PASS loop 46 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:06:51] SERVED /live.mp3
+[17:07:01] PASS loop 46 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:07:02] PASS loop 46 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:07:03] PASS loop 46 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:07:04] PASS loop 46 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:07:05] PASS loop 46 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:07:05] PASS loop 46 done in 25s: heap 6212407 -> 6212415 (+8), uptime=1883, sensor 32.0C/52%
+[17:07:25] PASS --- loop 47 --- uptime=1903 heap=6210635 src=airplay ap=standby
+[17:07:36] PASS loop 47 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:07:36] SERVED /live.mp3
+[17:07:46] PASS loop 47 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:07:47] PASS loop 47 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:07:48] PASS loop 47 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:07:49] PASS loop 47 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:07:50] PASS loop 47 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:07:50] PASS loop 47 done in 25s: heap 6210635 -> 6212395 (+1760), uptime=1928, sensor 32.1C/52%
+[17:08:10] PASS --- loop 48 --- uptime=1948 heap=6212099 src=airplay ap=standby
+[17:08:22] PASS loop 48 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:08:22] SERVED /live.mp3
+[17:08:32] PASS loop 48 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:08:32] PASS loop 48 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:08:33] PASS loop 48 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:08:34] PASS loop 48 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:08:35] PASS loop 48 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:08:36] PASS loop 48 done in 25s: heap 6212099 -> 6212635 (+536), uptime=1973, sensor 32.2C/51%
+[17:08:56] PASS --- loop 49 --- uptime=1993 heap=6212303 src=airplay ap=standby
+[17:09:07] PASS loop 49 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:09:07] SERVED /live.mp3
+[17:09:17] PASS loop 49 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:09:18] PASS loop 49 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:09:19] PASS loop 49 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:09:20] PASS loop 49 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:09:21] PASS loop 49 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:09:24] PASS loop 49 wifi scan | 3 networks
+[17:09:24] PASS loop 49 speedtest ping | body='ok'
+[17:09:24] PASS loop 49 done in 28s: heap 6212303 -> 6212407 (+104), uptime=2022, sensor 31.9C/51%
+[17:09:44] PASS --- loop 50 --- uptime=2042 heap=6211867 src=airplay ap=standby
+[17:09:56] PASS loop 50 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:09:56] SERVED /live.mp3
+[17:10:06] PASS loop 50 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:10:06] PASS loop 50 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:10:07] PASS loop 50 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:10:08] PASS loop 50 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:10:09] PASS loop 50 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:10:09] PASS loop 50 done in 25s: heap 6211867 -> 6212379 (+512), uptime=2067, sensor 31.8C/52%
+[17:10:30] PASS --- loop 51 --- uptime=2087 heap=6211859 src=airplay ap=standby
+[17:11:01] PASS loop 51 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:11:01] SERVED /live.mp3
+[17:11:11] PASS loop 51 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:11:12] PASS loop 51 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:11:13] PASS loop 51 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:11:14] PASS loop 51 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:11:15] PASS loop 51 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:11:15] PASS loop 51 done in 45s: heap 6211859 -> 6212427 (+568), uptime=2133, sensor 31.9C/52%
+[17:11:35] PASS --- loop 52 --- uptime=2153 heap=6212207 src=airplay ap=standby
+[17:11:46] PASS loop 52 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:11:47] SERVED /live.mp3
+[17:11:57] PASS loop 52 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:11:58] PASS loop 52 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:11:59] PASS loop 52 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:12:01] PASS loop 52 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:12:02] PASS loop 52 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:12:02] PASS loop 52 done in 26s: heap 6212207 -> 6212399 (+192), uptime=2180, sensor 31.9C/52%
+[17:12:22] PASS --- loop 53 --- uptime=2200 heap=6212379 src=airplay ap=standby
+[17:12:33] PASS loop 53 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:12:33] SERVED /live.mp3
+[17:12:44] PASS loop 53 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:12:44] PASS loop 53 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:12:45] PASS loop 53 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:12:46] PASS loop 53 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:12:47] PASS loop 53 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:12:50] PASS loop 53 wifi scan | 5 networks
+[17:12:50] PASS loop 53 done in 28s: heap 6212379 -> 6212595 (+216), uptime=2228, sensor 31.8C/52%
+[17:13:10] PASS --- loop 54 --- uptime=2248 heap=6212191 src=airplay ap=standby
+[17:13:22] PASS loop 54 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:13:22] SERVED /live.mp3
+[17:13:32] PASS loop 54 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:13:33] PASS loop 54 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:13:33] PASS loop 54 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:13:35] PASS loop 54 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:13:36] PASS loop 54 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:13:36] PASS loop 54 done in 25s: heap 6212191 -> 6212619 (+428), uptime=2273, sensor 31.8C/52%
+[17:13:56] PASS --- loop 55 --- uptime=2294 heap=6212403 src=airplay ap=standby
+[17:14:07] PASS loop 55 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:14:07] SERVED /live.mp3
+[17:14:17] PASS loop 55 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:14:18] PASS loop 55 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:14:19] PASS loop 55 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:14:20] PASS loop 55 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:14:21] PASS loop 55 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:14:21] PASS loop 55 done in 25s: heap 6212403 -> 6212415 (+12), uptime=2319, sensor 31.8C/52%
+[17:15:03] PASS --- loop 56 --- uptime=2339 heap=6211983 src=airplay ap=standby
+[17:15:14] PASS loop 56 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:15:14] SERVED /live.mp3
+[17:15:24] PASS loop 56 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:15:25] PASS loop 56 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:15:26] PASS loop 56 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:15:27] PASS loop 56 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:15:28] PASS loop 56 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:15:28] PASS loop 56 done in 46s: heap 6211983 -> 6211011 (-972), uptime=2386, sensor 31.7C/52%
+[17:15:48] PASS --- loop 57 --- uptime=2406 heap=6212287 src=airplay ap=standby
+[17:15:59] PASS loop 57 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:15:59] SERVED /live.mp3
+[17:16:09] PASS loop 57 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:16:10] PASS loop 57 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:16:11] PASS loop 57 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:16:12] PASS loop 57 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:16:13] PASS loop 57 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:16:16] PASS loop 57 wifi scan | 5 networks
+[17:16:16] PASS loop 57 speedtest ping | body='ok'
+[17:16:16] PASS loop 57 done in 28s: heap 6212287 -> 6212391 (+104), uptime=2434, sensor 32.1C/52%
+[17:16:36] PASS --- loop 58 --- uptime=2454 heap=6212191 src=airplay ap=standby
+[17:16:48] PASS loop 58 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:16:48] SERVED /live.mp3
+[17:16:59] PASS loop 58 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:17:00] PASS loop 58 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:17:01] PASS loop 58 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:17:02] PASS loop 58 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:17:03] PASS loop 58 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:17:03] PASS loop 58 done in 26s: heap 6212191 -> 6212367 (+176), uptime=2481, sensor 31.7C/52%
+[17:17:23] PASS --- loop 59 --- uptime=2501 heap=6212187 src=airplay ap=standby
+[17:17:35] PASS loop 59 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:17:35] SERVED /live.mp3
+[17:17:45] PASS loop 59 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:17:45] PASS loop 59 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:17:46] PASS loop 59 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:17:47] PASS loop 59 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:17:48] PASS loop 59 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:17:48] PASS loop 59 done in 25s: heap 6212187 -> 6212627 (+440), uptime=2526, sensor 31.6C/53%
+[17:18:09] PASS --- loop 60 --- uptime=2546 heap=6212075 src=airplay ap=standby
+[17:18:20] PASS loop 60 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:18:20] SERVED /live.mp3
+[17:18:30] PASS loop 60 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:18:31] PASS loop 60 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:18:31] PASS loop 60 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:18:32] PASS loop 60 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:18:33] PASS loop 60 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:18:34] PASS loop 60 done in 25s: heap 6212075 -> 6212423 (+348), uptime=2571, sensor 31.6C/53%
+[17:18:54] PASS --- loop 61 --- uptime=2591 heap=6212415 src=airplay ap=standby
+[17:19:05] PASS loop 61 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:19:05] SERVED /live.mp3
+[17:19:15] PASS loop 61 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:19:16] PASS loop 61 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:19:17] PASS loop 61 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:19:18] PASS loop 61 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:19:19] PASS loop 61 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:19:22] PASS loop 61 wifi scan | 3 networks
+[17:19:22] PASS loop 61 done in 28s: heap 6212415 -> 6208731 (-3684), uptime=2620, sensor 31.7C/53%
+[17:20:04] PASS --- loop 62 --- uptime=2661 heap=6212059 src=airplay ap=standby
+[17:20:15] PASS loop 62 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:20:15] SERVED /live.mp3
+[17:20:25] PASS loop 62 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:20:26] PASS loop 62 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:20:27] PASS loop 62 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:20:28] PASS loop 62 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:20:29] PASS loop 62 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:20:29] PASS loop 62 done in 46s: heap 6212059 -> 6212591 (+532), uptime=2687, sensor 32.1C/52%
+[17:20:49] PASS --- loop 63 --- uptime=2707 heap=6207695 src=airplay ap=standby
+[17:21:00] PASS loop 63 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:21:00] SERVED /live.mp3
+[17:21:10] PASS loop 63 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:21:11] PASS loop 63 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:21:12] PASS loop 63 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:21:13] PASS loop 63 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:21:14] PASS loop 63 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:21:14] PASS loop 63 done in 25s: heap 6207695 -> 6212411 (+4716), uptime=2732, sensor 31.9C/52%
+[17:21:34] PASS --- loop 64 --- uptime=2752 heap=6212375 src=airplay ap=standby
+[17:21:46] PASS loop 64 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:21:46] SERVED /live.mp3
+[17:21:56] PASS loop 64 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:21:56] PASS loop 64 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:21:57] PASS loop 64 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:21:58] PASS loop 64 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:21:59] PASS loop 64 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:21:59] PASS loop 64 done in 25s: heap 6212375 -> 6202011 (-10364), uptime=2777, sensor 31.7C/52%
+[17:22:20] PASS --- loop 65 --- uptime=2797 heap=6212183 src=airplay ap=standby
+[17:22:31] PASS loop 65 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:22:31] SERVED /live.mp3
+[17:22:41] PASS loop 65 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:22:42] PASS loop 65 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:22:43] PASS loop 65 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:22:44] PASS loop 65 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:22:45] PASS loop 65 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:22:48] PASS loop 65 wifi scan | 5 networks
+[17:22:48] PASS loop 65 speedtest ping | body='ok'
+[17:22:48] PASS loop 65 done in 28s: heap 6212183 -> 6212391 (+208), uptime=2826, sensor 32.0C/52%
+[17:23:08] PASS --- loop 66 --- uptime=2846 heap=6212167 src=airplay ap=standby
+[17:23:19] PASS loop 66 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:23:19] SERVED /live.mp3
+[17:23:29] PASS loop 66 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:23:30] PASS loop 66 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:23:31] PASS loop 66 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:23:32] PASS loop 66 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:23:33] PASS loop 66 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:23:33] PASS loop 66 done in 25s: heap 6212167 -> 6212415 (+248), uptime=2871, sensor 32.0C/52%
+[17:23:53] PASS --- loop 67 --- uptime=2891 heap=6212431 src=airplay ap=standby
+[17:24:05] PASS loop 67 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:24:05] SERVED /live.mp3
+[17:24:15] PASS loop 67 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:24:16] PASS loop 67 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:24:17] PASS loop 67 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:24:18] PASS loop 67 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:24:40] PASS loop 67 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:24:40] PASS loop 67 done in 47s: heap 6212431 -> 6209311 (-3120), uptime=2938, sensor 31.9C/52%
+[17:25:01] PASS --- loop 68 --- uptime=2958 heap=6212191 src=airplay ap=standby
+[17:25:12] PASS loop 68 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:25:12] SERVED /live.mp3
+[17:25:22] PASS loop 68 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:25:23] PASS loop 68 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:25:24] PASS loop 68 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:25:25] PASS loop 68 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:25:26] PASS loop 68 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:25:26] PASS loop 68 done in 25s: heap 6212191 -> 6212619 (+428), uptime=2984, sensor 32.2C/51%
+[17:25:46] PASS --- loop 69 --- uptime=3004 heap=6212403 src=airplay ap=standby
+[17:25:57] PASS loop 69 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:25:58] SERVED /live.mp3
+[17:26:08] PASS loop 69 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:26:08] PASS loop 69 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:26:09] PASS loop 69 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:26:10] PASS loop 69 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:26:11] PASS loop 69 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:26:14] PASS loop 69 wifi scan | 3 networks
+[17:26:14] PASS loop 69 done in 28s: heap 6212403 -> 6212635 (+232), uptime=3032, sensor 31.7C/52%
+[17:26:35] PASS --- loop 70 --- uptime=3052 heap=6212387 src=airplay ap=standby
+[17:26:46] PASS loop 70 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:26:46] SERVED /live.mp3
+[17:26:56] PASS loop 70 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:26:57] PASS loop 70 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:26:58] PASS loop 70 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:26:59] PASS loop 70 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:27:00] PASS loop 70 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:27:00] PASS loop 70 done in 25s: heap 6212387 -> 6212407 (+20), uptime=3078, sensor 31.5C/53%
+[17:27:20] PASS --- loop 71 --- uptime=3098 heap=6212163 src=airplay ap=standby
+[17:27:31] PASS loop 71 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:27:31] SERVED /live.mp3
+[17:27:42] PASS loop 71 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:27:42] PASS loop 71 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:27:43] PASS loop 71 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:27:44] PASS loop 71 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:27:45] PASS loop 71 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:27:45] PASS loop 71 done in 25s: heap 6212163 -> 6212635 (+472), uptime=3123, sensor 31.6C/52%
+[17:28:06] PASS --- loop 72 --- uptime=3143 heap=6212215 src=airplay ap=standby
+[17:28:35] PASS loop 72 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:28:35] SERVED /live.mp3
+[17:28:46] PASS loop 72 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:28:46] PASS loop 72 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:28:47] PASS loop 72 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:28:48] PASS loop 72 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:28:49] PASS loop 72 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:28:49] PASS loop 72 done in 44s: heap 6212215 -> 6212615 (+400), uptime=3187, sensor 31.8C/52%
+[17:29:10] PASS --- loop 73 --- uptime=3207 heap=6212183 src=airplay ap=standby
+[17:29:21] PASS loop 73 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:29:21] SERVED /live.mp3
+[17:29:31] PASS loop 73 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:29:32] PASS loop 73 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:29:33] PASS loop 73 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:29:34] PASS loop 73 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:29:35] PASS loop 73 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:29:38] PASS loop 73 wifi scan | 4 networks
+[17:29:38] PASS loop 73 speedtest ping | body='ok'
+[17:29:38] PASS loop 73 done in 28s: heap 6212183 -> 6212603 (+420), uptime=3236, sensor 31.8C/53%
+[17:29:58] PASS --- loop 74 --- uptime=3256 heap=6212415 src=airplay ap=standby
+[17:30:09] PASS loop 74 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:30:09] SERVED /live.mp3
+[17:30:20] PASS loop 74 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:30:20] PASS loop 74 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:30:21] PASS loop 74 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:30:22] PASS loop 74 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:30:23] PASS loop 74 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:30:23] PASS loop 74 done in 25s: heap 6212415 -> 6212619 (+204), uptime=3281, sensor 31.8C/53%
+[17:30:43] PASS --- loop 75 --- uptime=3301 heap=6210587 src=airplay ap=standby
+[17:30:55] PASS loop 75 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:30:55] SERVED /live.mp3
+[17:31:05] PASS loop 75 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:31:06] PASS loop 75 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:31:07] PASS loop 75 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:31:08] PASS loop 75 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:31:09] PASS loop 75 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:31:09] PASS loop 75 done in 25s: heap 6210587 -> 6212391 (+1804), uptime=3327, sensor 31.7C/53%
+[17:31:29] PASS --- loop 76 --- uptime=3347 heap=6212223 src=airplay ap=standby
+[17:31:40] PASS loop 76 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:31:40] SERVED /live.mp3
+[17:31:51] PASS loop 76 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:31:51] PASS loop 76 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:31:52] PASS loop 76 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:31:53] PASS loop 76 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:31:54] PASS loop 76 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:31:54] PASS loop 76 done in 25s: heap 6212223 -> 6212615 (+392), uptime=3372, sensor 32.2C/51%
+[17:32:15] PASS --- loop 77 --- uptime=3392 heap=6212203 src=airplay ap=standby
+[17:32:26] PASS loop 77 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:32:26] SERVED /live.mp3
+[17:32:36] PASS loop 77 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:32:37] PASS loop 77 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:32:38] PASS loop 77 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:32:39] PASS loop 77 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:32:40] PASS loop 77 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:32:43] PASS loop 77 wifi scan | 4 networks
+[17:32:43] PASS loop 77 done in 28s: heap 6212203 -> 6212403 (+200), uptime=3421, sensor 32.1C/51%
+[17:33:03] PASS --- loop 78 --- uptime=3441 heap=6212043 src=airplay ap=standby
+[17:33:14] PASS loop 78 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:33:15] SERVED /live.mp3
+[17:33:25] PASS loop 78 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:33:25] PASS loop 78 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:33:26] PASS loop 78 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:33:27] PASS loop 78 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:33:28] PASS loop 78 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:33:29] PASS loop 78 done in 25s: heap 6212043 -> 6211019 (-1024), uptime=3466, sensor 31.9C/51%
+[17:33:49] PASS --- loop 79 --- uptime=3486 heap=6212399 src=airplay ap=standby
+[17:34:00] PASS loop 79 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:34:00] SERVED /live.mp3
+[17:34:10] PASS loop 79 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:34:11] PASS loop 79 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:34:12] PASS loop 79 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:34:13] PASS loop 79 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:34:14] PASS loop 79 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=3 synced=True
+[17:34:14] PASS loop 79 done in 25s: heap 6212399 -> 6212647 (+248), uptime=3512, sensor 31.8C/52%
+[17:34:34] PASS --- loop 80 --- uptime=3532 heap=6212415 src=airplay ap=standby
+[17:34:45] PASS loop 80 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:34:45] SERVED /live.mp3
+[17:34:56] PASS loop 80 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:34:56] PASS loop 80 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:34:57] PASS loop 80 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:34:58] PASS loop 80 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:34:59] PASS loop 80 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:34:59] PASS loop 80 done in 25s: heap 6212415 -> 6205083 (-7332), uptime=3557, sensor 32.1C/51%
+[17:35:20] PASS --- loop 81 --- uptime=3577 heap=6212223 src=airplay ap=standby
+[17:35:31] PASS loop 81 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:35:31] SERVED /live.mp3
+[17:35:41] PASS loop 81 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:35:42] PASS loop 81 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:35:42] PASS loop 81 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:35:44] PASS loop 81 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:35:45] PASS loop 81 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:35:48] PASS loop 81 wifi scan | 3 networks
+[17:35:48] PASS loop 81 speedtest ping | body='ok'
+[17:35:48] PASS loop 81 done in 28s: heap 6212223 -> 6212407 (+184), uptime=3605, sensor 32.3C/51%
+[17:36:08] PASS --- loop 82 --- uptime=3626 heap=6212119 src=airplay ap=standby
+[17:36:19] PASS loop 82 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:36:19] SERVED /live.mp3
+[17:36:29] PASS loop 82 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:36:30] PASS loop 82 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:36:31] PASS loop 82 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:36:32] PASS loop 82 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:36:33] PASS loop 82 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=1 synced=True
+[17:36:33] PASS loop 82 done in 25s: heap 6212119 -> 6212367 (+248), uptime=3651, sensor 32.0C/51%
+[17:36:53] PASS --- loop 83 --- uptime=3671 heap=6212155 src=airplay ap=standby
+[17:37:05] PASS loop 83 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:37:05] SERVED /live.mp3
+[17:37:15] PASS loop 83 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:37:15] PASS loop 83 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:37:16] PASS loop 83 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:37:17] PASS loop 83 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:37:18] PASS loop 83 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=4 synced=True
+[17:37:19] PASS loop 83 done in 25s: heap 6212155 -> 6212587 (+432), uptime=3696, sensor 31.8C/52%
+[17:37:39] PASS --- loop 84 --- uptime=3716 heap=6212367 src=airplay ap=standby
+[17:37:50] PASS loop 84 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:37:50] SERVED /live.mp3
+[17:38:00] PASS loop 84 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:38:01] PASS loop 84 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:38:02] PASS loop 84 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:38:03] PASS loop 84 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:38:04] PASS loop 84 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:38:04] PASS loop 84 done in 25s: heap 6212367 -> 6210847 (-1520), uptime=3742, sensor 31.9C/52%
+[17:38:24] PASS --- loop 85 --- uptime=3762 heap=6212167 src=airplay ap=standby
+[17:38:36] PASS loop 85 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:38:36] SERVED /live.mp3
+[17:38:46] PASS loop 85 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:38:47] PASS loop 85 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:38:47] PASS loop 85 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:38:49] PASS loop 85 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:38:50] PASS loop 85 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:38:53] PASS loop 85 wifi scan | 4 networks
+[17:38:53] PASS loop 85 done in 28s: heap 6212167 -> 6212615 (+448), uptime=3790, sensor 31.8C/52%
+[17:39:13] PASS --- loop 86 --- uptime=3811 heap=6212191 src=airplay ap=standby
+[17:39:24] PASS loop 86 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:39:24] SERVED /live.mp3
+[17:39:34] PASS loop 86 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:39:35] PASS loop 86 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:39:36] PASS loop 86 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:39:37] PASS loop 86 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:39:38] PASS loop 86 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=2 synced=True
+[17:39:38] PASS loop 86 done in 25s: heap 6212191 -> 6212399 (+208), uptime=3836, sensor 31.5C/53%
+[17:39:58] PASS --- loop 87 --- uptime=3856 heap=6212179 src=airplay ap=standby
+[17:40:10] PASS loop 87 SD play/skip/stop + I2S handback | playing=True title=True pathmatch=True sr=44100 stopped=idle src=airplay
+[17:40:10] SERVED /live.mp3
+[17:40:20] PASS loop 87 radio live stream + skip + handback | playing=True after_next=playing stopped=idle src=airplay err=-
+[17:40:21] PASS loop 87 volume extremes + restore | set->get [0, 100, 33, 43] expected [0, 100, 33, 43]
+[17:40:22] PASS loop 87 channel mode round trip | modes [1, 2, 3, 0], restored to 0
+[17:40:23] PASS loop 87 SD mkdir/list/delete (CJK+ASCII) | /__soak中文测试 listed=True inner=True deleted=True; /__soak_ascii listed=True inner=True deleted=True
+[17:40:24] PASS loop 87 misc endpoints | reset=usb np=standby fs=7 entries, sensor_age=0 synced=True
+[17:40:24] PASS loop 87 done in 25s: heap 6212179 -> 6212623 (+444), uptime=3882, sensor 31.8C/53%
+[17:40:44] PASS === harness finished: 87 loops, PASS=730 FAIL=1 ===
+[17:40:44] PASS first 40 failures:
+   [16:35:54] FAIL REBOOT detected | uptime 530 -> 12 reset_reason=usb

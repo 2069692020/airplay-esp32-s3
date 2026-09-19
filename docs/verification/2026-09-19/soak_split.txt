@@ -1,0 +1,16 @@
+切分点 16:36:00（带 D1/D2/D3 的镜像启动）
+修复前 2499 行 / 修复后 5855 行
+
+指标                                                  修复前      修复后
+D1 含 ESC 的行                                        2126     5285
+D3 W web_radio: HTTP error event                     28        0
+W sd_card: 打不开目录                                     13        0
+
+--- 修复后仍然出现的 W/E 归并（这才是当前镜像的真实噪声底）---
+   80  E (N) HTTP_CLIENT: Incomplete chunked data received -2
+   76  E (N) transport_base: tcp_read error, errno=Socket is not connected
+    2  E (N) HTTP_CLIENT: Incomplete chunked data received -1
+    2  E (N) transport_base: poll_read select error 0, errno = Success, fd = 57
+
+修复后 W/E 总数 160 条，其中"每次主动停止电台固定 2 条 E"占 158 条（电台停止 82 次）
+修复后崩溃类关键字: 0

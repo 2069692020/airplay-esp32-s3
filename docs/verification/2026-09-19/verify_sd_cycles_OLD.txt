@@ -1,0 +1,10 @@
+OLD image baseline heap=6212767 uptime=15 reset=unknown
+cycle 1: state=playing advanced=True | stop->idle active=False | heap=6211275 (delta -1492) uptime=19
+cycle 2: state=playing advanced=True | stop->idle active=False | heap=6209767 (delta -3000) uptime=22
+cycle 3: state=playing advanced=True | stop->idle active=False | heap=6208247 (delta -4520) uptime=25
+cycle 4: state=playing advanced=True | stop->idle active=False | heap=6203315 (delta -9452) uptime=28
+cycle 5: state=playing advanced=True | stop->idle active=False | heap=6205231 (delta -7536) uptime=32
+cycle 6: state=playing advanced=True | stop->idle active=False | heap=6203759 (delta -9008) uptime=35
+cycle 7: state=playing advanced=True | stop->idle active=False | heap=6201899 (delta -10868) uptime=38
+cycle 8: state=playing advanced=True | stop->idle active=False | heap=6189131 (delta -23636) uptime=41
+OLD final heap=6194239 (net -18528 over 8 cycles) uptime=42

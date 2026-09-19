@@ -1,0 +1,3 @@
+当前 build/airplay2-receiver.bin                 aa91c8e2c7972c66c9b5f4ecccc41d73  2231648 B
+快照 firmware/airplay2-receiver.bin              7f78637a443b74cd7c02384c113ae80c  2229120 B
+NVS 备份                                         61dd2ffd07e186e47e51e8f5c2889d19  65536 B

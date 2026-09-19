@@ -1,0 +1,74 @@
+test server up on 0.0.0.0:8899
+device up: uptime=109 reset_reason=usb heap=6212539
+
+=== TEST 1: m3u relative entry resolution ===
+play response: {"success": true, "state": "connecting"}
+  t+ 1s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 2s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 3s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 4s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 5s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 6s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 7s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 8s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+ 9s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+10s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+11s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+12s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+13s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+  t+14s state=idle       count=2 index=2 title=Root Absolute Entry url=http://192.0.2.9:8899/abs.mp3
+device requested, in order: ['/radio/list.m3u', '/radio/song.mp3', '/radio/song.mp3', '/abs.mp3', '/abs.mp3']
+VERDICT relative entry -> /radio/song.mp3 (FIXED: resolved against the playlist directory)
+VERDICT root-absolute entry -> /abs.mp3 requested (correct)
+
+=== TEST 2: stall self-heal must stop, not replay forever ===
+play response: {"success": true, "state": "connecting"}
+  t+ 1s state=playing    error=-              slow_requests=1
+  t+ 2s state=playing    error=-              slow_requests=1
+  t+ 3s state=playing    error=-              slow_requests=1
+  t+ 4s state=playing    error=-              slow_requests=1
+  t+ 5s state=playing    error=-              slow_requests=1
+  t+ 6s state=playing    error=-              slow_requests=1
+  t+ 7s state=playing    error=-              slow_requests=1
+  t+ 8s state=playing    error=-              slow_requests=1
+  t+ 9s state=playing    error=-              slow_requests=1
+  t+10s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+11s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+12s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+13s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+14s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+15s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+16s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+17s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+18s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+19s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+20s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+21s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+22s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+23s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+24s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+25s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+26s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+27s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+28s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+29s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+30s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+31s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+32s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+33s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+34s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+35s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+36s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+37s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+38s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+39s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+40s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+41s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+42s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+43s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+44s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+  t+45s state=idle       error=HTTP 失败: ESP_ERR_HTTP_INCOMPLETE_DATA slow_requests=1
+total /slow.mp3 requests: 1 ; final state: idle
+VERDICT replayed the same track 1 times (BROKEN)
+
+device after both tests: uptime=176 heap=6200215 playback_source=airplay airplay_state=standby reset_reason=usb

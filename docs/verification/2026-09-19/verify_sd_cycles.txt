@@ -1,0 +1,13 @@
+target path: /刀郎 - 喀什噶尔胡杨 (Demo珍藏版).flac
+name round-trips as valid UTF-8, 48 bytes
+baseline heap=6212883 uptime=117
+cycle 1: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212899 (delta from baseline +16) uptime=120
+cycle 2: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6206647 (delta from baseline -6236) uptime=123
+cycle 3: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212887 (delta from baseline +4) uptime=127
+cycle 4: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212923 (delta from baseline +40) uptime=130
+cycle 5: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212899 (delta from baseline +16) uptime=133
+cycle 6: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212903 (delta from baseline +20) uptime=137
+cycle 7: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212907 (delta from baseline +24) uptime=140
+cycle 8: play_ok=True state=playing elapsed 0->1 advanced=True path_echo_match=True | after stop state=idle active=False | heap=6212875 (delta from baseline -8) uptime=143
+final heap=6212867 (net -16 over 8 cycles) uptime=143
+final: playback_source=airplay airplay_state=standby reset_reason=usb

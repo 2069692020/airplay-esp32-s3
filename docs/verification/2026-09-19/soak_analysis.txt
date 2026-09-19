@@ -1,0 +1,36 @@
+=== 串口 W/E 去重统计（129 条原始）===
+    1  E (196480) transport_base: tcp_read error, errno=Socket is not connected
+    1  E (196480) HTTP_CLIENT: Incomplete chunked data received -2
+    1  W (196480) web_radio: HTTP error event
+    1  W (200320) sd_card: 打不开目录: /sdcard/__soak���Ĳ���
+    1  W (204250) httpd_uri: httpd_uri: Method '3' not allowed for URI '/api/speed
+    1  W (204250) httpd_txrx: httpd_resp_send_err: 405 Method Not Allowed - Specif
+    1  E (243660) transport_base: tcp_read error, errno=Socket is not connected
+    1  E (243660) HTTP_CLIENT: Incomplete chunked data received -2
+    1  W (243660) web_radio: HTTP error event
+    1  W (247600) sd_card: 打不开目录: /sdcard/__soak���Ĳ���
+    1  E (288250) transport_base: tcp_read error, errno=Socket is not connected
+    1  E (288250) HTTP_CLIENT: Incomplete chunked data received -2
+    1  W (288260) web_radio: HTTP error event
+    1  W (292160) sd_card: 打不开目录: /sdcard/__soak���Ĳ���
+    1  E (332890) transport_base: tcp_read error, errno=Socket is not connected
+    1  E (332890) HTTP_CLIENT: Incomplete chunked data received -2
+    1  W (332900) web_radio: HTTP error event
+    1  W (336950) sd_card: 打不开目录: /sdcard/__soak���Ĳ���
+    1  W (337070) httpd_txrx: httpd_resp_send_err: 400 Bad Request - Missing 'name
+    1  W (337070) httpd_uri: httpd_uri: uri handler execution failed
+
+boot banner 次数（每次启动一条）: 2
+panic/backtrace/watchdog 命中:
+  (无)
+
+=== harness 的 FAIL 原文 ===
+[16:35:54] FAIL REBOOT detected | uptime 530 -> 12 reset_reason=usb
+
+=== harness 最近 6 轮收尾行 ===
+[16:34:12] PASS loop 5 done in 28s: heap 6210519 -> 6212587 (+2068), uptime=510, sensor 31.8C/52%
+[16:34:58] PASS loop 6 done in 25s: heap 6212383 -> 6212615 (+232), uptime=555, sensor 31.9C/52%
+[16:36:19] PASS loop 7 done in 61s: heap 6212183 -> 6212703 (+520), uptime=37, sensor 31.9C/52%
+[16:37:05] PASS loop 8 done in 26s: heap 6212327 -> 6212595 (+268), uptime=83, sensor 31.6C/52%
+[16:37:56] PASS loop 9 done in 30s: heap 6212279 -> 6212515 (+236), uptime=134, sensor 31.8C/52%
+[16:38:41] PASS loop 10 done in 25s: heap 6212187 -> 6212743 (+556), uptime=179, sensor 31.8C/52%

@@ -1,0 +1,70 @@
+[old] test server up on 0.0.0.0:8899
+device: uptime=15 reset_reason=unknown heap=6215299
+
+=== TEST 1: m3u relative entry resolution ===
+play: {"success": true, "state": "connecting"}
+  t+ 1s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 2s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 3s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 4s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 5s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 6s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 7s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 8s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 9s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+10s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+requested, in order: ['/radio/list.m3u', '/song.mp3', '/song.mp3', '/abs.mp3', '/abs.mp3']
+VERDICT 1: BROKEN - relative entry resolved against the site root
+VERDICT 1b: root-absolute entry requested /abs.mp3 (correct)
+
+=== TEST 2: stall self-heal must stop, not replay forever ===
+play: {"success": true, "state": "connecting"}
+  t+ 1s state=playing    error=-                                          slow_requests=1
+  t+ 2s state=playing    error=-                                          slow_requests=1
+  t+ 3s state=playing    error=-                                          slow_requests=1
+  t+ 4s state=playing    error=-                                          slow_requests=1
+  t+ 5s state=playing    error=-                                          slow_requests=1
+  t+ 6s state=playing    error=-                                          slow_requests=1
+  t+ 7s state=playing    error=-                                          slow_requests=1
+  t+ 8s state=playing    error=-                                          slow_requests=1
+  t+ 9s state=playing    error=-                                          slow_requests=1
+  t+10s state=playing    error=-                                          slow_requests=1
+  t+11s state=playing    error=-                                          slow_requests=1
+  t+12s state=playing    error=-                                          slow_requests=1
+  t+13s state=playing    error=-                                          slow_requests=1
+  t+14s state=playing    error=-                                          slow_requests=1
+  t+15s state=playing    error=-                                          slow_requests=1
+  t+16s state=playing    error=-                                          slow_requests=1
+  t+17s state=playing    error=-                                          slow_requests=1
+  t+18s state=playing    error=-                                          slow_requests=2
+  t+19s state=playing    error=-                                          slow_requests=2
+  t+20s state=playing    error=-                                          slow_requests=2
+  t+21s state=playing    error=-                                          slow_requests=2
+  t+22s state=playing    error=-                                          slow_requests=2
+  t+23s state=playing    error=-                                          slow_requests=2
+  t+24s state=playing    error=-                                          slow_requests=2
+  t+25s state=playing    error=-                                          slow_requests=2
+  t+26s state=playing    error=-                                          slow_requests=2
+  t+27s state=playing    error=-                                          slow_requests=2
+  t+28s state=playing    error=-                                          slow_requests=2
+  t+29s state=playing    error=-                                          slow_requests=2
+  t+30s state=playing    error=-                                          slow_requests=2
+  t+31s state=playing    error=-                                          slow_requests=2
+  t+32s state=playing    error=-                                          slow_requests=2
+  t+33s state=playing    error=-                                          slow_requests=2
+  t+34s state=playing    error=-                                          slow_requests=2
+  t+35s state=playing    error=-                                          slow_requests=2
+  t+36s state=playing    error=-                                          slow_requests=3
+  t+37s state=playing    error=-                                          slow_requests=3
+  t+38s state=playing    error=-                                          slow_requests=3
+  t+39s state=playing    error=-                                          slow_requests=3
+  t+40s state=playing    error=-                                          slow_requests=3
+  t+41s state=playing    error=-                                          slow_requests=3
+  t+42s state=playing    error=-                                          slow_requests=3
+  t+43s state=playing    error=-                                          slow_requests=3
+  t+44s state=playing    error=-                                          slow_requests=3
+  t+45s state=playing    error=-                                          slow_requests=3
+total /slow.mp3 requests over 45 s: 3 ; final state=playing error=
+VERDICT 2: BROKEN - replayed the same track 3 times in 45 s (infinite retry loop)
+
+device after both tests: uptime=78 heap=6197363 playback_source=airplay airplay_state=standby reset_reason=unknown

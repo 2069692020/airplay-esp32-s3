@@ -1,0 +1,7 @@
+[15:47:46] === capture start port=COM3 for 100s, reopen every 20s ===
+[15:47:46] port open (dtr/rts held low)
+[15:48:07] -- quiet for 20s, reopened (1) --
+[15:48:27] -- quiet for 20s, reopened (2) --
+[15:48:48] -- quiet for 20s, reopened (3) --
+[15:49:08] -- quiet for 20s, reopened (4) --
+[15:49:27] === capture end, 0 bytes, 4 reopens ===

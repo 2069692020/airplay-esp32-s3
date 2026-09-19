@@ -1,0 +1,63 @@
+IDF : <IDF>
+CMD : <IDF_TOOLS>/python_env/idf5.5_py3.11_env/Scripts/python.exe <IDF>/tools/idf.py -D SDKCONFIG_DEFAULTS=config/sdkconfig.defaults;config/sdkconfig.defaults.esp32s3;config/sdkconfig.user.esp32s3 build
+CWD : <PROJECT>
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_master.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_50.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_smp.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_dtm.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_test.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_scan.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.libc.ld
+-- Adding linker script <IDF>/components/esp_rom/esp32s3/ld/esp32s3.rom.newlib.ld
+-- Adding linker script <IDF>/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- LVGL version: 9.6.0
+-- USB_DEVICE_UAC: 1.3.1
+-- Components: app_trace app_update audio-resampler board_utils boards bootloader bootloader_support bt cjk_font cmock console cxx dac dac_es8311 dac_tas57xx dac_tas58xx display driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_driver_ana_cmpr esp_driver_bitscrambler esp_driver_cam esp_driver_dac esp_driver_gpio esp_driver_gptimer esp_driver_i2c esp_driver_i2s esp_driver_isp esp_driver_jpeg esp_driver_ledc esp_driver_mcpwm esp_driver_parlio esp_driver_pcnt esp_driver_ppa esp_driver_rmt esp_driver_sdio esp_driver_sdm esp_driver_sdmmc esp_driver_sdspi esp_driver_spi esp_driver_touch_sens esp_driver_tsens esp_driver_twai esp_driver_uart esp_driver_usb_serial_jtag esp_eth esp_event esp_gdbstub esp_hal_ieee802154 esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_system esp_timer esp_vfs_console esp_wifi espcoredump espressif__cmake_utilities espressif__esp_audio_codec espressif__esp_lvgl_port espressif__led_strip espressif__libsodium espressif__mdns espressif__tinyusb espressif__usb_device_uac esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 json log lvgl__lvgl lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread rt sd_card sd_player sdmmc soc spi_flash spiffs spiffs_storage tcp_transport touch_element u8g2 u8g2-hal-esp-idf ulp unity usb vfs wear_levelling web_radio wifi_provisioning wpa_supplicant xtensa
+-- Component paths: <IDF>/components/app_trace <IDF>/components/app_update <PROJECT>/components/audio-resampler <PROJECT>/components/board_utils <PROJECT>/components/boards <IDF>/components/bootloader <IDF>/components/bootloader_support <IDF>/components/bt <PROJECT>/components/cjk_font <IDF>/components/cmock <IDF>/components/console <IDF>/components/cxx <PROJECT>/components/dac <PROJECT>/components/dac_es8311 <PROJECT>/components/dac_tas57xx <PROJECT>/components/dac_tas58xx <PROJECT>/components/display <IDF>/components/driver <IDF>/components/efuse <IDF>/components/esp-tls <IDF>/components/esp_adc <IDF>/components/esp_app_format <IDF>/components/esp_bootloader_format <IDF>/components/esp_coex <IDF>/components/esp_common <IDF>/components/esp_driver_ana_cmpr <IDF>/components/esp_driver_bitscrambler <IDF>/components/esp_driver_cam <IDF>/components/esp_driver_dac <IDF>/components/esp_driver_gpio <IDF>/components/esp_driver_gptimer <IDF>/components/esp_driver_i2c <IDF>/components/esp_driver_i2s <IDF>/components/esp_driver_isp <IDF>/components/esp_driver_jpeg <IDF>/components/esp_driver_ledc <IDF>/components/esp_driver_mcpwm <IDF>/components/esp_driver_parlio <IDF>/components/esp_driver_pcnt <IDF>/components/esp_driver_ppa <IDF>/components/esp_driver_rmt <IDF>/components/esp_driver_sdio <IDF>/components/esp_driver_sdm <IDF>/components/esp_driver_sdmmc <IDF>/components/esp_driver_sdspi <IDF>/components/esp_driver_spi <IDF>/components/esp_driver_touch_sens <IDF>/components/esp_driver_tsens <IDF>/components/esp_driver_twai <IDF>/components/esp_driver_uart <IDF>/components/esp_driver_usb_serial_jtag <IDF>/components/esp_eth <IDF>/components/esp_event <IDF>/components/esp_gdbstub <IDF>/components/esp_hal_ieee802154 <IDF>/components/esp_hid <IDF>/components/esp_http_client <IDF>/components/esp_http_server <IDF>/components/esp_https_ota <IDF>/components/esp_https_server <IDF>/components/esp_hw_support <IDF>/components/esp_lcd <IDF>/components/esp_local_ctrl <IDF>/components/esp_mm <IDF>/components/esp_netif <IDF>/components/esp_netif_stack <IDF>/components/esp_partition <IDF>/components/esp_phy <IDF>/components/esp_pm <IDF>/components/esp_psram <IDF>/components/esp_ringbuf <IDF>/components/esp_rom <IDF>/components/esp_security <IDF>/components/esp_system <IDF>/components/esp_timer <IDF>/components/esp_vfs_console <IDF>/components/esp_wifi <IDF>/components/espcoredump <PROJECT>/managed_components/espressif__cmake_utilities <PROJECT>/managed_components/espressif__esp_audio_codec <PROJECT>/managed_components/espressif__esp_lvgl_port <PROJECT>/managed_components/espressif__led_strip <PROJECT>/managed_components/espressif__libsodium <PROJECT>/managed_components/espressif__mdns <PROJECT>/managed_components/espressif__tinyusb <PROJECT>/managed_components/espressif__usb_device_uac <IDF>/components/esptool_py <IDF>/components/fatfs <IDF>/components/freertos <IDF>/components/hal <IDF>/components/heap <IDF>/components/http_parser <IDF>/components/idf_test <IDF>/components/ieee802154 <IDF>/components/json <IDF>/components/log <PROJECT>/managed_components/lvgl__lvgl <IDF>/components/lwip <PROJECT>/main <IDF>/components/mbedtls <IDF>/components/mqtt <IDF>/components/newlib <IDF>/components/nvs_flash <IDF>/components/nvs_sec_provider <IDF>/components/openthread <IDF>/components/partition_table <IDF>/components/perfmon <IDF>/components/protobuf-c <IDF>/components/protocomm <IDF>/components/pthread <IDF>/components/rt <PROJECT>/components/sd_card <PROJECT>/components/sd_player <IDF>/components/sdmmc <IDF>/components/soc <IDF>/components/spi_flash <IDF>/components/spiffs <PROJECT>/components/spiffs_storage <IDF>/components/tcp_transport <IDF>/components/touch_element <PROJECT>/components/u8g2 <PROJECT>/components/u8g2-hal-esp-idf <IDF>/components/ulp <IDF>/components/unity <IDF>/components/usb <IDF>/components/vfs <IDF>/components/wear_levelling <PROJECT>/components/web_radio <IDF>/components/wifi_provisioning <IDF>/components/wpa_supplicant <IDF>/components/xtensa
+-- Configuring done (18.2s)
+-- Generating done (1.1s)
+-- Build files have been written to: <PROJECT>/build
+[1/6] C:\windows\system32\cmd.exe /C "cd /D <PROJECT>\build\esp-idf\esptool_py && <IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe <IDF>/components/partition_table/check_sizes.py --offset 0x8000 partition --type app <PROJECT>/build/partition_table/partition-table.bin <PROJECT>/build/airplay2-receiver.bin"
+
+airplay2-receiver.bin binary size 0x220c50 bytes. Smallest app partition is 0x400000 bytes. 0x1df3b0 bytes (47%) free.
+
+
+[2/6] Performing build step for 'bootloader'
+
+[1/1] C:\windows\system32\cmd.exe /C "cd /D <PROJECT>\build\bootloader\esp-idf\esptool_py && <IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe <IDF>/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 <PROJECT>/build/bootloader/bootloader.bin"
+
+
+Bootloader binary size 0x5700 bytes. 0x2900 bytes (32%) free.
+
+
+
+[3/6] C:\windows\system32\cmd.exe /C "cd /D <PROJECT>\build && <IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe <IDF>/components/spiffs/spiffsgen.py 0x7e0000 <PROJECT>/data <PROJECT>/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+
+[4/6] No install step for 'bootloader'
+
+[5/6] Completed 'bootloader'
+
+
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x19000 build\ota_data_initial.bin 0x20000 build\airplay2-receiver.bin 0x820000 build\storage.bin
+or from the "<PROJECT>\build" directory
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+WARNING: Python interpreter "<IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe" used to start idf.py is not from installed venv "<IDF_TOOLS>/python_env/idf5.5_py3.11_env"
+CMake Warning at <IDF>/tools/cmake/build.cmake:631 (message):
+Call Stack (most recent call first):
+  <IDF>/tools/cmake/project.cmake:752 (idf_build_process)
+  CMakeLists.txt:29 (project)
+
+
+CMake Warning at <IDF>/tools/cmake/project.cmake:765 (message):
+  Missing kconfig option.  Re-run the build process...
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (project)
+
+

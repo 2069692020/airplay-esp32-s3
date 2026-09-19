@@ -1,0 +1,6 @@
+esptool.py v4.12.dev3
+Serial port COM3
+
+A fatal error occurred: Could not open COM3, the port is busy or doesn't exist.
+(could not open port 'COM3': PermissionError(13, '�ܾ����ʡ�', None, 5))
+

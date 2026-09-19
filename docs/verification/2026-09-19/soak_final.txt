@@ -1,0 +1,53 @@
+串口总行数 8354（含 3 段采集会话）
+ESC 残留行数: 7411  （D1 修复后新采集段应为 0）
+
+=== W/E 共 279 条，按类型归并 ===
+  107  E (N) HTTP_CLIENT: Incomplete chunked data received -2
+  103  E (N) transport_base: tcp_read error, errno=Socket is not connected
+   28  W (N) web_radio: HTTP error event
+   13  W (N) sd_card: 打不开目录: /sdcard
+    3  W (N) web_server: 拒绝升级: 未设置升级口令（网页升级处于关闭状态）
+    2  W (N) httpd_uri: httpd_uri: Method '3' not allowed for URI '/api/speedtest/pin
+    2  W (N) httpd_txrx: httpd_resp_send_err: 405 Method Not Allowed - Specified meth
+    2  W (N) httpd_txrx: httpd_sock_err: error in send : 104
+    2  W (N) AUD_SDEC_REG: Overwrote ES decoder 540233805
+    2  W (N) AUD_SDEC_REG: Overwrote ES decoder 1128352838
+    2  E (N) HTTP_CLIENT: Incomplete chunked data received -1
+    2  E (N) transport_base: poll_read select error 0, errno = Success, fd = 57
+    1  W (N) httpd_txrx: httpd_resp_send_err: 400 Bad Request - Missing 'name'
+    1  W (N) httpd_uri: httpd_uri: uri handler execution failed
+    1  W (N) httpd_txrx: httpd_sock_err: error in recv : 104
+    1  E (N) esp-tls: [sock=57] select() timeout
+    1  E (N) transport_base: Failed to open a new connection: 32774
+    1  E (N) HTTP_CLIENT: Connection failed, sock < 0
+    1  E (N) web_radio: HTTP 失败: ESP_ERR_HTTP_CONNECT
+    1  W (N) web_server: 拒绝升级: 口令不对
+    1  W (N) web_server: 拒绝升级: 本地播放正在进行，先停止 SD / 网络音乐
+    1  W (N) wifi: Best-AP scan: no APs found for SSID <HOME_SSID>
+    1  W (N) httpd_ws: httpd_ws_send_frame_async: Failed to send WS header
+
+=== 崩溃类关键字 ===
+  Guru Meditation      0
+  Backtrace            0
+  Stack canary         0
+  Heap corruption      0
+  esp_task_wdt         0
+  abort()              0
+  assert failed        0
+  Fatal exception      0
+  Brownout             0
+  cache disabled       0
+
+=== 启动次数与原因 ===
+  [16:20:41] rst:0xc (RTC_SW_CPU_RST),boot:0x1b (SPI_FAST_FLASH_BOOT)
+  [16:20:41] I (24) boot: ESP-IDF v5.5.5 2nd stage bootloader
+  [16:25:41] rst:0xc (RTC_SW_CPU_RST),boot:0x1b (SPI_FAST_FLASH_BOOT)
+  [16:25:41] I (24) boot: ESP-IDF v5.5.5 2nd stage bootloader
+
+=== 内存水位（Boot baseline 行）===
+  [16:20:50] I (9032) main: Boot baseline: free heap 162555 internal (largest block 90112), 6051004 SPIRAM
+  [16:25:50] I (8960) main: Boot baseline: free heap 162579 internal (largest block 90112), 6051004 SPIRAM
+
+=== 交还 I2S 次数 ===
+  I2S 已交还 AirPlay: 219
+  Playback task stopped: 219  /  拒绝外部写入: 0

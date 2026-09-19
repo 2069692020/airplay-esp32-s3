@@ -1,0 +1,70 @@
+[new] test server up on 0.0.0.0:8899
+device: uptime=8 reset_reason=usb heap=6211887
+
+=== TEST 1: m3u relative entry resolution ===
+play: {"success": true, "state": "connecting"}
+  t+ 1s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 2s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 3s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 4s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 5s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 6s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 7s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 8s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+ 9s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+  t+10s state=idle       count=2 index=2 cur_url=http://192.0.2.9:8899/abs.mp3
+requested, in order: ['/radio/list.m3u', '/radio/song.mp3', '/radio/song.mp3', '/abs.mp3', '/abs.mp3']
+VERDICT 1: FIXED - relative entry resolved against the playlist directory
+VERDICT 1b: root-absolute entry requested /abs.mp3 (correct)
+
+=== TEST 2: stall self-heal must stop, not replay forever ===
+play: {"success": true, "state": "connecting"}
+  t+ 1s state=playing    error=-                                          slow_requests=1
+  t+ 2s state=playing    error=-                                          slow_requests=1
+  t+ 3s state=playing    error=-                                          slow_requests=1
+  t+ 4s state=playing    error=-                                          slow_requests=1
+  t+ 5s state=playing    error=-                                          slow_requests=1
+  t+ 6s state=playing    error=-                                          slow_requests=1
+  t+ 7s state=playing    error=-                                          slow_requests=1
+  t+ 8s state=playing    error=-                                          slow_requests=1
+  t+ 9s state=playing    error=-                                          slow_requests=1
+  t+10s state=playing    error=-                                          slow_requests=1
+  t+11s state=playing    error=-                                          slow_requests=1
+  t+12s state=playing    error=-                                          slow_requests=1
+  t+13s state=playing    error=-                                          slow_requests=1
+  t+14s state=playing    error=-                                          slow_requests=1
+  t+15s state=playing    error=-                                          slow_requests=1
+  t+16s state=playing    error=-                                          slow_requests=1
+  t+17s state=playing    error=-                                          slow_requests=1
+  t+18s state=error      error=下载中断                                       slow_requests=1
+  t+19s state=error      error=下载中断                                       slow_requests=1
+  t+20s state=error      error=下载中断                                       slow_requests=1
+  t+21s state=error      error=下载中断                                       slow_requests=1
+  t+22s state=error      error=下载中断                                       slow_requests=1
+  t+23s state=error      error=下载中断                                       slow_requests=1
+  t+24s state=error      error=下载中断                                       slow_requests=1
+  t+25s state=error      error=下载中断                                       slow_requests=1
+  t+26s state=error      error=下载中断                                       slow_requests=1
+  t+27s state=error      error=下载中断                                       slow_requests=1
+  t+28s state=error      error=下载中断                                       slow_requests=1
+  t+29s state=error      error=下载中断                                       slow_requests=1
+  t+30s state=error      error=下载中断                                       slow_requests=1
+  t+31s state=error      error=下载中断                                       slow_requests=1
+  t+32s state=error      error=下载中断                                       slow_requests=1
+  t+33s state=error      error=下载中断                                       slow_requests=1
+  t+34s state=error      error=下载中断                                       slow_requests=1
+  t+35s state=error      error=下载中断                                       slow_requests=1
+  t+36s state=error      error=下载中断                                       slow_requests=1
+  t+37s state=error      error=下载中断                                       slow_requests=1
+  t+38s state=error      error=下载中断                                       slow_requests=1
+  t+39s state=error      error=下载中断                                       slow_requests=1
+  t+40s state=error      error=下载中断                                       slow_requests=1
+  t+41s state=error      error=下载中断                                       slow_requests=1
+  t+42s state=error      error=下载中断                                       slow_requests=1
+  t+43s state=error      error=下载中断                                       slow_requests=1
+  t+44s state=error      error=下载中断                                       slow_requests=1
+  t+45s state=error      error=下载中断                                       slow_requests=1
+total /slow.mp3 requests over 45 s: 1 ; final state=error error=下载中断
+VERDICT 2: FIXED - one request, stopped, and the error is visible to the UI
+
+device after both tests: uptime=70 heap=6200527 playback_source=airplay airplay_state=standby reset_reason=usb

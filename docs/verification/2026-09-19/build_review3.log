@@ -1,0 +1,63 @@
+IDF : <IDF>
+CMD : <IDF_TOOLS>/python_env/idf5.5_py3.11_env/Scripts/python.exe <IDF>/tools/idf.py -D SDKCONFIG_DEFAULTS=config/sdkconfig.defaults;config/sdkconfig.defaults.esp32s3;config/sdkconfig.user.esp32s3 build
+CWD : <PROJECT>
+
+
+[2/11] C:\windows\system32\cmd.exe /C "cd /D <PROJECT>\build && <IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe <IDF>/components/spiffs/spiffsgen.py 0x7e0000 <PROJECT>/data <PROJECT>/build/storage.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len"
+
+[3/11] No install step for 'bootloader'
+
+[4/11] Completed 'bootloader'
+
+[5/11] Building C object esp-idf/web_radio/CMakeFiles/__idf_web_radio.dir/web_radio.c.obj
+
+[6/11] Linking C static library esp-idf\web_radio\libweb_radio.a
+
+[7/11] Generating esp-idf/esp_system/ld/sections.ld
+
+[8/11] Linking CXX executable airplay2-receiver.elf
+
+[9/11] Generating binary image from built executable
+
+esptool.py v4.12.dev3
+
+
+Creating esp32s3 image...
+
+
+Merged 2 ELF sections
+
+
+Successfully created esp32s3 image.
+
+
+Generated <PROJECT>/build/airplay2-receiver.bin
+
+[10/11] C:\windows\system32\cmd.exe /C "cd /D <PROJECT>\build\esp-idf\esptool_py && <IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe <IDF>/components/partition_table/check_sizes.py --offset 0x8000 partition --type app <PROJECT>/build/partition_table/partition-table.bin <PROJECT>/build/airplay2-receiver.bin"
+
+airplay2-receiver.bin binary size 0x220c60 bytes. Smallest app partition is 0x400000 bytes. 0x1df3a0 bytes (47%) free.
+
+
+
+
+Project build complete. To flash, run:
+ idf.py flash
+or
+ idf.py -p PORT flash
+or
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash --flash_mode dio --flash_size 16MB --flash_freq 80m 0x0 build\bootloader\bootloader.bin 0x8000 build\partition_table\partition-table.bin 0x19000 build\ota_data_initial.bin 0x20000 build\airplay2-receiver.bin 0x820000 build\storage.bin
+or from the "<PROJECT>\build" directory
+ python -m esptool --chip esp32s3 -b 460800 --before default_reset --after hard_reset write_flash "@flash_args"
+WARNING: Python interpreter "<IDF_TOOLS>\python_env\idf5.5_py3.11_env\Scripts\python.exe" used to start idf.py is not from installed venv "<IDF_TOOLS>/python_env/idf5.5_py3.11_env"
+CMake Warning at <IDF>/tools/cmake/build.cmake:631 (message):
+Call Stack (most recent call first):
+  <IDF>/tools/cmake/project.cmake:752 (idf_build_process)
+  CMakeLists.txt:29 (project)
+
+
+CMake Warning at <IDF>/tools/cmake/project.cmake:765 (message):
+  Missing kconfig option.  Re-run the build process...
+Call Stack (most recent call first):
+  CMakeLists.txt:29 (project)
+
+

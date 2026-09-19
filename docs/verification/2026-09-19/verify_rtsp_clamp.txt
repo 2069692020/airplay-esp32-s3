@@ -1,0 +1,153 @@
+before: uptime=166 reset_reason=usb heap=6212539 airplay_state=standby
+OPTIONS -> RTSP/1.0 200 OK
+ANNOUNCE (malformed: 8 ch, frame_len 99999, bit_depth 200, rate 999999)
+  -> RTSP/1.0 200 OK
+ANNOUNCE (well formed: 2 ch, 352, 16 bit, 44100) -- must NOT warn
+  -> RTSP/1.0 200 OK
+TEARDOWN -> RTSP/1.0 200 OK
+
+after:  uptime=177 reset_reason=usb heap=6212511 airplay_state=standby playback_source=airplay
+uptime 166 -> 177 : NO REBOOT (still climbing)
+
+=== device log captured over /ws/logs (122 lines) ===
+  [handshake] HTTP/1.1 101 Switching Protocols
+  [0;32mI (1610) dacp: DACP client initialized[0m
+  [0;32mI (1610) playback_ctrl: Playback control initialized[0m
+  [0;32mI (1610) sd_player: MP3 解码器已注册[0m
+  [0;32mI (1620) sd_player: FLAC 解码器已注册[0m
+  [0;32mI (1620) sd_player: SD 播放器就绪 (缓冲 512 KB, 放 PSRAM)[0m
+  [0;32mI (1630) sd_player: 输出钩子已注册[0m
+  W (1630) AUD_SDEC_REG: Overwrote ES decoder 540233805
+  [0;32mI (1640) web_radio: MP3 解码器已注册[0m
+  W (1640) AUD_SDEC_REG: Overwrote ES decoder 1128352838
+  [0;32mI (1650) web_radio: FLAC 解码器已注册[0m
+  [0;32mI (1650) web_radio: Web radio ready (缓冲 256 KB, 放 PSRAM)[0m
+  [0;32mI (1660) web_radio: 输出钩子已注册[0m
+  [0;32mI (1670) led: Initializing LED subsystem[0m
+  [0;32mI (1670) led:   Status LED GPIO: -1[0m
+  [0;32mI (1670) led:   Error LED GPIO: -1[0m
+  [0;32mI (1680) led:   RGB LED GPIO: -1[0m
+  [0;32mI (1680) led:   LED brightness: 60[0m
+  [0;32mI (1690) led: Starting in STANDBY state[0m
+  [0;32mI (1690) led: LED state change: 0
+   -> 0[0m
+  [0;32mI (1700) led: LED subsystem initialized[0m
+  [0;32mI (1700) main: Board: ESP32-S3 Generic[0m
+  [0;32mI (1700) ESP32S3-Generic: Display I2C bus initialized: sda=39, scl=38[0m
+  [0;32mI (1720) ESP32S3-Generic: Display I2C lines idle-high (SDA=1 SCL=1) — OK[0m
+  [0;32mI (1720) ESP32S3-Generic: Generic board initialized[0m
+  [0;32mI (1720) display: Initializing OLED display (I2C: SDA=39 SCL=38 addr=0x3c)[0m
+  [0;32mI (1830) display: Display responded at 0x3c (attempt 2)[0m
+  [0;32mI (2160) display: OLED display initialized[0m
+  [0;32mI (2160) aht20: AHT20 已启用: sda=9 scl=15 addr=0x38 100kHz 周期=5000 ms[0m
+  [0;32mI (2160) pp: pp rom version: e7ae62f[0m
+  [0;32mI (2160) net80211: net80211 rom version: e7ae62f[0m
+  I (2180) wifi:wifi driver task: 3fcbe9f8, prio:23, stack:6656, core=0
+  I (2190) wifi:wifi firmware version: b9f67df
+  I (2190) wifi:wifi certification version: v7.0
+  I (2190) wifi:config NVS flash: enabled
+  I (2190) wifi:config nano formatting: disabled
+  I (2190) wifi:Init data frame 
+  dynamic rx buffer num: 32
+  I (2200) wifi:Init static rx mgmt buffer num: 5
+  I (2200) wifi:Init management short buffer num: 32
+  I (2200) wifi:Init dynamic tx buffer num: 32
+  I (2210) wifi:Init static tx FG buffer num: 2
+  I (2210) wifi:Init static rx buffer size: 1600
+  I (2220) wifi:Init static rx buffer num: 10
+  I (2220) wifi:Init dynamic rx buffer num: 32
+  [0;32mI (2230) wifi_init: rx ba win: 6[0m
+  [0;32mI (2230) wifi_init: accept mbox: 6[0m
+  [0;32mI (2230) wifi_init: tcpip mbox: 32[0m
+  [0;32mI (2240) wifi_init: udp mbox: 64[0m
+  [0;32mI (2240) wifi_init: tcp mbox: 6[0m
+  [0;32mI (2240) wifi_init: tcp tx win: 5760[0m
+  [0;32mI (2250) wifi_init: tcp rx win: 5760[0m
+  [0;32mI (2250) wifi_init: tcp mss: 1440[0m
+  [0;32mI (2260) wifi_init: WiFi IRAM OP enabled[0m
+  [0;32mI (2260) wifi_init: WiFi RX IRAM OP enabled[0m
+  I (2270) wifi:Set ps type: 0, coexist: 0
+  [0;32mI (2270) wifi: Hostname set to: ESP32-AirPlay[0m
+  [0;32mI (2290) phy_init: phy_version 712,87e8c20e,Apr 13 2026,18:51:10[0m
+  I (2340) wifi:mode : sta (
+  02:00:00:00:00:01) + softAP (02:00:00:00:00:02)
+  I (2340) wifi:enable tsf
+  I (2340) wifi:Total power save buffer number: 16
+  I (2340) wifi:Init max length of beacon: 752/752
+  I (2350) wifi:Init max length of beacon: 752/752
+  [0;32mI (2350) wifi: AP started[0m
+  [0;32mI (2350) wifi: AP+STA mode started: AP SSID=ESP32-AirPlay-Setup[0m
+  [0;32mI (2360) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.0.2.1[0m
+  [0;32mI (2360) wifi: Connecting to WiFi: <HOME_SSID>[0m
+  [0;32mI (2600) aht20: AHT20 就绪 (sda=9 scl=15 addr=0x38): 31.6 °C / 51.7 %RH[0m
+  [0;32mI (5250) wifi: Found 1 APs for SSID '<HOME_SSID>', best: 02:00:00:00:00:03 (rssi=-35, ch=7)[0m
+  I (5270) wifi:ap channel adjust o:1,1 n:7,2
+  I (5270) wifi:new:<7,0>, old:<1,1>, ap:<7,2>, sta:<7,0>, prof:1, snd_ch_cfg:0x0
+  I (5280) wifi:state: init -> auth (0xb0)
+  I (5740) wifi:state: auth -> assoc (0x0)
+  I (5750) wifi:state: assoc -> run (0x10)
+  I (5780) wifi:connected with <HOME_SSID>, aid = 2, channel 7, BW20, bssid = 02:00:00:00:00:03
+  I (5780) wi
+  fi:security: WPA3-SAE H2E, phy: bgn, rssi: -34, cipher(pairwise:0x3, group:0x3), pmf:1
+  I (5790) wifi:pm start, type: 0
+  I (5790) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+  I (5790) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+  I (6060) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+  I (7820) wifi:<ba-add>idx:0 (ifx:0, 02:00:00:00:00:03), tid:7, ssn:0, winSize:64
+  [0;32mI (8910) wifi: Got IP: 192.0.2.5[0m
+  [0;32mI (8910) wifi: STA connected (AP 保持开启, 热点地址 192.0.2.1)[0m
+  [0;32mI (8910) esp_netif_handlers: sta ip: 192.0.2.5, mask: 255.255.255.0, gw: 192.0.2.1[0m
+  [0;32mI (8920) log_stream: Log streaming on /ws/logs[0m
+  [0;32mI (8920) web_server: Web server started on port 80 with captive portal support[0m
+  [0;32mI (8930) time_sync: SNTP 已启动: server=ntp.aliyun.com tz=CST-8（重同步间隔由 LWIP 决定）[0m
+  [0;32mI (8940) main: Starting AirPlay services...[0m
+  [0;32mI (8950) audio_buf: Sor
+  ted buffer created: 1000 slots × 1416 bytes = 1416000 bytes[0m
+  [0;32mI (8950) audio_output: I2S initialized: Rate=44100, DMA_Desc=8, DMA_Frame=256[0m
+  [0;32mI (8960) mdns_mem: mDNS task will be created from SPIRAM[0m
+  [0;32mI (8960) mdns_airplay: mDNS hostname: ESP32-AirPlay.local (device name: ESP32 AirPlay)[0m
+  [0;32mI (8970) rtsp_server: RTSP server listening on port 7000[0m
+  [0;32mI (8980) playback_ctrl: Source set to 1[0m
+  [0;32mI (8980) main: AirPlay ready[0m
+  [0;32mI (8990) main: Boot baseline: free heap 162631 internal (largest block 90112), 6051004 SPIRAM[0m
+  [0;32mI (9000) buttons: No buttons configured[0m
+  I (9240) wifi:<ba-add>idx:1 (ifx:0, 02:00:00:00:00:03), tid:0, ssn:0, winSize:64
+  [0;32mI (13940) time_sync: NTP 同步完成: 2026-09-19 14:26:43 (tz=CST-8)[0m
+  [0;32mI (170110) rtsp_server: New client connected[0m
+  [0;32mI (170110) rtsp_server: 已把网页音量 -17.0 dB 同步到新 AirPlay 连接[0m
+  [0;32mI (170120) rtsp_server: Client IP: 192.0.2.9[0m
+  [0;33mW (170140) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  [0;33mW (170140) rtsp_handlers: Implausible samples-per-frame 99999, using 352[0m
+  [0;33mW (170140) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  [0;33mW (170150) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  [0;33mW (170160) rtsp_handlers: Implausible sample rate 999999 Hz, using 44100[0m
+  [0;32mI (170160) web_radio: AirPlay 会话开始, 电台让出 I2S[0m
+  [0;32mI (170170) web_radio: 电台已空闲, I2S 交还 AirPlay[0m
+  [0;32mI (170180) sd_player: AirPlay 会话开始, SD 播放器让出 I2S[0m
+  [0;32mI (170180) sd_player: 播放器已空闲, I2S 交还 AirPlay[0m
+  [0;33mW (171170) rtsp_handlers: Unsupported channel count 0, decoding as 2[0m
+  [0;33mW (171170) rtsp_handlers: Unsupported channel count 0, decoding as 2[0m
+  [0;32mI (171170) web_radio: AirPlay 会话开始, 电台让出 I2S[0m
+  [0;32mI (171180) web_radio: 电台已空闲, I2S 交还 AirPlay[0m
+  [0;32mI (171180) sd_player: AirPlay 会话开始, SD 播放器让出 I2S[0m
+  [0;32mI (171190) sd_player: 播放器已空闲, I2S 交还 AirPlay[0m
+  [ws eof]
+
+clamp warnings seen: 7
+  * [0;33mW (170140) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  * [0;33mW (170140) rtsp_handlers: Implausible samples-per-frame 99999, using 352[0m
+  * [0;33mW (170140) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  * [0;33mW (170150) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  * [0;33mW (170160) rtsp_handlers: Implausible sample rate 999999 Hz, using 44100[0m
+  * [0;33mW (171170) rtsp_handlers: Unsupported channel count 0, decoding as 2[0m
+  * [0;33mW (171170) rtsp_handlers: Unsupported channel count 0, decoding as 2[0m
+all W/E lines: 9
+  ! W (1630) AUD_SDEC_REG: Overwrote ES decoder 540233805
+  ! W (1640) AUD_SDEC_REG: Overwrote ES decoder 1128352838
+  ! [0;33mW (170140) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  ! [0;33mW (170140) rtsp_handlers: Implausible samples-per-frame 99999, using 352[0m
+  ! [0;33mW (170140) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  ! [0;33mW (170150) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  ! [0;33mW (170160) rtsp_handlers: Implausible sample rate 999999 Hz, using 44100[0m
+  ! [0;33mW (171170) rtsp_handlers: Unsupported channel count 0, decoding as 2[0m
+  ! [0;33mW (171170) rtsp_handlers: Unsupported channel count 0, decoding as 2[0m

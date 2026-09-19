@@ -1,0 +1,1325 @@
+127.0.0.1 - - [19/Sep/2026 14:27:18] "GET /index.html HTTP/1.1" 200 -
+127.0.0.1 - - [19/Sep/2026 14:27:18] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /index.html?v=a5 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /base.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/sd/list?dir=%2F HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /favicon.ico HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:24] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:25] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:30] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:30] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:32] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:32] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:32] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:32] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:35] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:35] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:40] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:40] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:40] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:45] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:48] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:48] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:48] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:48] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:50] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:50] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:55] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:55] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:57] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:57] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:57] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:57] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:27:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:27:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:00] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:04] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:05] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:05] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:10] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:10] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:12] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:12] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:13] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:13] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:15] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:15] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:20] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:20] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:21] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:25] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:28] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:28] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:29] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:30] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:30] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:35] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:35] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:36] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:37] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:37] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:40] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:44] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:45] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:45] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:50] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:50] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:52] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:52] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:53] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:53] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:55] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:55] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:28:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:28:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:00] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:00] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:01] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:01] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:05] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:08] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:08] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:09] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:10] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:10] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:15] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:15] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:16] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:16] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:17] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:17] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:20] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:24] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:25] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:25] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:30] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:30] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:32] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:32] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:33] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:33] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:35] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:35] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:40] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:40] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:41] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:41] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:45] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:48] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:48] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:49] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:50] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:50] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:55] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:55] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:56] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:56] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:57] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:57] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:29:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:29:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:00] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:04] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:05] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:05] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:10] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:10] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:12] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:12] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:13] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:13] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:15] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:15] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:20] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:20] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:21] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:25] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:28] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:28] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:29] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:30] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:30] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:35] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:35] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:36] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:37] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:37] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:40] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:44] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:45] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:45] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:50] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:50] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:52] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:52] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:53] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:53] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:55] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:55] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:30:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:30:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:00] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:00] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:01] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:01] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:05] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:08] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:08] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:09] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:10] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:10] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:15] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:15] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:16] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:16] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:17] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:17] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:20] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:24] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:25] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:25] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:30] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:30] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:32] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:32] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:33] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:33] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:35] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:35] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:40] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:40] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:41] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:41] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:45] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:48] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:48] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:49] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:50] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:50] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:55] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:55] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:56] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:56] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:57] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:57] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:31:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:31:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:00] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:04] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:05] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:05] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:10] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:10] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:12] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:12] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:13] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:13] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:15] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:15] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:20] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:20] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:21] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:25] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:28] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:28] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:29] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:30] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:30] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:35] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:35] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:36] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:37] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:37] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:40] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:44] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:45] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:45] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:50] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:50] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:52] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:52] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:53] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:53] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:55] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:55] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:32:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:32:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:00] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:00] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:01] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:01] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:05] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:08] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:08] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:09] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:10] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:10] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:16] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:16] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:16] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:16] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:17] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:17] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:21] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:24] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:25] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:26] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:26] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:31] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:31] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:32] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:32] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:33] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:33] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:36] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:40] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:40] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:41] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:41] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:41] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:41] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:46] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:46] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:48] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:48] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:49] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:51] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:51] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:56] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:56] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:56] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:56] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:57] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:57] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:33:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:33:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:01] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:01] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:04] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:05] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:05] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:06] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:06] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:11] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:11] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:12] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:12] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:13] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:13] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:16] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:16] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:20] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:20] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:21] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:21] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:26] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:26] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:28] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:28] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:29] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:31] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:31] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:36] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:36] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:37] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:37] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:39] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:39] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:39] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:39] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:39] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:39] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:41] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:41] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:44] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:44] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:44] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:44] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:44] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:44] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:45] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:45] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:46] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:46] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:49] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:49] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:49] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:49] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:49] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:51] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:51] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:52] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:52] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:53] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:53] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:54] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:54] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:54] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:54] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:54] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:54] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:56] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:56] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:59] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:59] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:59] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:34:59] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:34:59] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:00] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:00] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:01] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:01] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:01] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:01] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:04] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:04] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:04] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:04] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:04] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:06] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:06] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:08] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:08] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:09] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:09] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:09] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:09] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:09] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:09] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:09] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:11] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:11] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:14] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:14] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:14] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:14] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:14] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:16] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:16] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:17] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:17] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:17] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:17] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:19] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:19] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:19] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:19] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:19] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:21] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:21] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:24] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:24] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:24] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:24] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:24] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:24] "GET /api/wifi/scan HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:25] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:25] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:25] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:26] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:26] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:29] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:29] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:29] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:29] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:29] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:31] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:31] "GET /api/nowplaying HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:33] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:33] "GET /api/music HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:33] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:33] "GET /api/sd/state HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:34] "GET /api/system/info HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:34] "GET /api/volume HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:34] "GET /api/audio/channel HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:34] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:34] "GET /api/led/brightness HTTP/1.1" 404 -
+127.0.0.1 - - [19/Sep/2026 14:35:36] code 404, message File not found
+127.0.0.1 - - [19/Sep/2026 14:35:36] "GET /api/nowplaying HTTP/1.1" 404 -

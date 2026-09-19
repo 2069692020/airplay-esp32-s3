@@ -1,0 +1,5 @@
+[15:43:27] === serial capture start port=COM3 for 8100s ===
+[15:43:27] port opened (dtr=False rts=False, so no reset from the open itself)
+[15:43:27] --- RTS pulsed: device reset, capturing boot from t=0 ---
+[15:45:59] [0;32mI (185159) wifi: 清除 BSSID 锁定, 下次重连改用扫描结果[0m
+[15:51:45] === capture start port=COM3 for 8400s, reopen every 150s ===

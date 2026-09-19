@@ -1,0 +1,40 @@
+capture start: device uptime=278
+marker A: OPTIONS -> RTSP/1.0 200 OK
+marker B: MALFORMED ANNOUNCE (8ch / frame_len 99999 / 200bit / 999999Hz) -> RTSP/1.0 200 OK
+marker C: WELL-FORMED stereo ANNOUNCE (2ch / 352 / 16bit / 44100) -> RTSP/1.0 200 OK
+marker D: legitimate MONO ANNOUNCE (1ch / 352 / 16bit / 44100) -> RTSP/1.0 200 OK
+marker E: TEARDOWN -> RTSP/1.0 200 OK
+capture end: device uptime=289 heap=6212707
+reboot? NO - uptime still climbing
+
+=== captured lines mentioning rtsp_handlers / rtsp_server (37 total captured) ===
+  [0;32mI (225800) rtsp_server: New client connected[0m
+  [0;32mI (225800) rtsp_server: Client IP: 192.0.2.9[0m
+  [0;32mI (227830) rtsp_handlers: TEARDOWN: has_streams=0 stream_count=0[0m
+  [0;32mI (227830) rtsp_server: Client slot 0 disconnected[0m
+  [0;32mI (282120) rtsp_server: New client connected[0m
+  [0;32mI (282120) rtsp_server: Client IP: 192.0.2.9[0m
+  [0;33mW (282720) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  [0;33mW (282720) rtsp_handlers: Implausible samples-per-frame 99999, using 352[0m
+  [0;33mW (282730) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  [0;33mW (282730) rtsp_handlers: Unsupported channel count 8, decoding as 2[0m
+  [0;33mW (282740) rtsp_handlers: Implausible sample rate 999999 Hz, using 44100[0m
+  [0;32mI (286370) rtsp_handlers: TEARDOWN: has_streams=0 stream_count=0[0m
+  [0;32mI (286370) rtsp_server: Client slot 1 disconnected[0m
+
+clamp warnings inside this window: 0
+
+=== CORRECTED VERDICT (the counter above was wrong: device log lines carry
+    ANSI colour escapes, so startswith("W (") never matched) ===
+relevant lines in window: 14
+clamp warnings in window: 5
+  * W (282720) rtsp_handlers: Unsupported channel count 8, decoding as 2
+  * W (282720) rtsp_handlers: Implausible samples-per-frame 99999, using 352
+  * W (282730) rtsp_handlers: Unsupported channel count 8, decoding as 2
+  * W (282730) rtsp_handlers: Unsupported channel count 8, decoding as 2
+  * W (282740) rtsp_handlers: Implausible sample rate 999999 Hz, using 44100
+
+window proof: New client connected at t=282120 ms, warnings at t=282720..282740 ms,
+  TEARDOWN at t=286370 ms -> markers C (well-formed stereo) and D (mono) were
+  sent inside this window and produced ZERO warnings.
+no reboot: device uptime 278 -> 289 s across the run.

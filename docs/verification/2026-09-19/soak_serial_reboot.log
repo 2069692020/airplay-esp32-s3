@@ -1,0 +1,195 @@
+[15:50:23] === capture start port=COM3 for 90s, reopen every 120s ===
+[15:50:23] port open (dtr/rts held low)
+[15:50:26] [0;32mI (451969) web_server: Restart requested via web interface[0m
+[15:50:26] I (452469) wifi:state: run -> init (0x0)
+[15:50:26] I (452479) wifi:pm stop, total sleep time: 0 us / 446675721 us
+[15:50:26] I (452479) wifi:<ba-del>idx:1, tid:0
+[15:50:26] I (452479) wifi:<ba-del>idx:0, tid:7
+[15:50:26] [0;32mI (452479) wifi: Disconnected from AP, reason: 8[0m
+[15:50:26] [0;32mI (452479) wifi: Retrying connection (1/5)...[0m
+[15:50:26] I (452539) wifi:flush txq
+[15:50:26] I (452539) wifi:stop sw txq
+[15:50:26] I (452539) wifi:lmac stop hw txq
+[15:50:26] ESP-ROM:esp32s3-20210327
+[15:50:26] Build:Mar 27 2021
+[15:50:26] rst:0xc (RTC_SW_CPU_RST),boot:0x1b (SPI_FAST_FLASH_BOOT)
+[15:50:26] Saved PC:0x4037f980
+[15:50:26] SPIWP:0xee
+[15:50:26] mode:DIO, clock div:1
+[15:50:26] load:0x3fce2820,len:0x1668
+[15:50:26] load:0x403c8700,len:0xec0
+[15:50:26] load:0x403cb700,len:0x3178
+[15:50:26] entry 0x403c894c
+[15:50:26] I (24) boot: ESP-IDF v5.5.5 2nd stage bootloader
+[15:50:26] I (24) boot: compile time Sep 19 2026 09:36:32
+[15:50:26] I (24) boot: Multicore bootloader
+[15:50:26] I (25) boot: chip revision: v0.2
+[15:50:26] I (27) boot: efuse block revision: v1.4
+[15:50:26] I (31) qio_mode: Enabling default flash chip QIO
+[15:50:26] I (35) boot.esp32s3: Boot SPI Speed : 80MHz
+[15:50:26] I (39) boot.esp32s3: SPI Mode       : QIO
+[15:50:26] I (43) boot.esp32s3: SPI Flash Size : 16MB
+[15:50:26] I (46) boot: Enabling RNG early entropy source...
+[15:50:26] I (51) boot: Partition Table:
+[15:50:26] I (54) boot: ## Label            Usage          Type ST Offset   Length
+[15:50:26] I (60) boot:  0 nvs              WiFi data        01 02 00009000 00010000
+[15:50:26] I (66) boot:  1 otadata          OTA data         01 00 00019000 00002000
+[15:50:26] I (73) boot:  2 phy_init         RF data          01 01 0001b000 00001000
+[15:50:26] I (79) boot:  3 ota_0            OTA app          00 10 00020000 00400000
+[15:50:26] I (86) boot:  4 ota_1            OTA app          00 11 00420000 00400000
+[15:50:26] I (92) boot:  5 storage          Unknown data     01 82 00820000 007e0000
+[15:50:26] I (99) boot: End of partition table
+[15:50:26] I (102) esp_image: segment 0: paddr=00020020 vaddr=3c140020 size=c7578h (816504) map
+[15:50:26] I (236) esp_image: segment 1: paddr=000e75a0 vaddr=3fc9ec00 size=05c64h ( 23652) load
+[15:50:26] I (241) esp_image: segment 2: paddr=000ed20c vaddr=40374000 size=02e0ch ( 11788) load
+[15:50:26] I (244) esp_image: segment 3: paddr=000f0020 vaddr=42000020 size=138e30h (1281584) map
+[15:50:27] I (446) esp_image: segment 4: paddr=00228e58 vaddr=40376e0c size=17db0h ( 97712) load
+[15:50:27] I (465) esp_image: segment 5: paddr=00240c10 vaddr=50000000 size=00020h (    32) load
+[15:50:27] I (476) boot: Loaded app from partition at offset 0x20000
+[15:50:27] I (476) boot: Disabling RNG early entropy source...
+[15:50:27] [0;32mI (487) octal_psram: vendor id    : 0x0d (AP)[0m
+[15:50:27] [0;32mI (487) octal_psram: dev id       : 0x02 (generation 3)[0m
+[15:50:27] [0;32mI (487) octal_psram: density      : 0x03 (64 Mbit)[0m
+[15:50:27] [0;32mI (492) octal_psram: good-die     : 0x01 (Pass)[0m
+[15:50:27] [0;32mI (497) octal_psram: Latency      : 0x01 (Fixed)[0m
+[15:50:27] [0;32mI (502) octal_psram: VCC          : 0x01 (3V)[0m
+[15:50:27] [0;32mI (507) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[15:50:27] [0;32mI (513) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[15:50:27] [0;32mI (519) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[15:50:27] [0;32mI (524) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[15:50:27] [0;32mI (531) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[15:50:27] [0;32mI (536) MSPI Timing: Enter psram timing tuning[0m
+[15:50:27] [0;32mI (542) esp_psram: Found 8MB PSRAM device[0m
+[15:50:27] [0;32mI (546) esp_psram: Speed: 80MHz[0m
+[15:50:27] [0;32mI (549) cpu_start: Multicore app[0m
+[15:50:27] [0;32mI (966) esp_psram: SPI SRAM memory test OK[0m
+[15:50:27] [0;32mI (975) cpu_start: GPIO 44 and 43 are used as console UART I/O pins[0m
+[15:50:27] [0;32mI (975) cpu_start: Pro cpu start user code[0m
+[15:50:27] [0;32mI (975) cpu_start: cpu freq: 240000000 Hz[0m
+[15:50:27] [0;32mI (980) app_init: Application information:[0m
+[15:50:27] [0;32mI (985) app_init: Project name:     airplay2-receiver[0m
+[15:50:27] [0;32mI (990) app_init: App version:      0.2.0[0m
+[15:50:27] [0;32mI (995) app_init: Compile time:     Sep 19 2026 09:36:12[0m
+[15:50:27] [0;32mI (1001) app_init: ELF file SHA256:  629e51b54...[0m
+[15:50:27] [0;32mI (1006) app_init: ESP-IDF:          v5.5.5[0m
+[15:50:27] [0;32mI (1011) efuse_init: Min chip rev:     v0.0[0m
+[15:50:27] [0;32mI (1016) efuse_init: Max chip rev:     v0.99 [0m
+[15:50:27] [0;32mI (1021) efuse_init: Chip rev:         v0.2[0m
+[15:50:27] [0;32mI (1026) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[15:50:27] [0;32mI (1033) heap_init: At 3FCAD288 len 0003C488 (241 KiB): RAM[0m
+[15:50:27] [0;32mI (1040) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[15:50:27] [0;32mI (1046) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM[0m
+[15:50:27] [0;32mI (1052) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[15:50:27] [0;32mI (1059) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[15:50:27] [0;32mI (1067) spi_flash: detected chip: generic[0m
+[15:50:27] [0;32mI (1071) spi_flash: flash io: qio[0m
+[15:50:27] [0;32mI (1075) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[15:50:27] [0;32mI (1082) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[15:50:27] [0;32mI (1090) main_task: Started on CPU0[0m
+[15:50:27] [0;32mI (1090) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[15:50:27] [0;32mI (1100) main_task: Calling app_main()[0m
+[15:50:27] [0;32mI (1110) main: Boot: reset reason 3[0m
+[15:50:27] [0;32mI (1130) settings: Loaded volume: -17.00 dB[0m
+[15:50:28] [0;32mI (1510) spiffs: SPIFFS mounted: 242215/7582961 bytes used[0m
+[15:50:28] [0;32mI (1510) sd_card: SPI3 总线已初始化 (CS=47 SCLK=45 MISO=21 MOSI=48)[0m
+[15:50:28] [0;32mI (1510) sdspi_transaction: cmd=52, R1 response: command not supported[0m
+[15:50:28] [0;32mI (1560) sdspi_transaction: cmd=5, R1 response: command not supported[0m
+[15:50:28] [0;32mI (1600) sd_card: SD 卡已挂载: /sdcard (SC64G)[0m
+[15:50:28] [0;32mI (1600) dacp: DACP client initialized[0m
+[15:50:28] [0;32mI (1600) playback_ctrl: Playback control initialized[0m
+[15:50:28] [0;32mI (1600) sd_player: MP3 解码器已注册[0m
+[15:50:28] [0;32mI (1610) sd_player: FLAC 解码器已注册[0m
+[15:50:28] [0;32mI (1610) sd_player: SD 播放器就绪 (缓冲 512 KB, 放 PSRAM)[0m
+[15:50:28] [0;32mI (1620) sd_player: 输出钩子已注册[0m
+[15:50:28] W (1620) AUD_SDEC_REG: Overwrote ES decoder 540233805
+[15:50:28] [0;32mI (1630) web_radio: MP3 解码器已注册[0m
+[15:50:28] W (1630) AUD_SDEC_REG: Overwrote ES decoder 1128352838
+[15:50:28] [0;32mI (1640) web_radio: FLAC 解码器已注册[0m
+[15:50:28] [0;32mI (1640) web_radio: Web radio ready (缓冲 256 KB, 放 PSRAM)[0m
+[15:50:28] [0;32mI (1650) web_radio: 输出钩子已注册[0m
+[15:50:28] [0;32mI (1660) led: Initializing LED subsystem[0m
+[15:50:28] [0;32mI (1660) led:   Status LED GPIO: -1[0m
+[15:50:28] [0;32mI (1660) led:   Error LED GPIO: -1[0m
+[15:50:28] [0;32mI (1670) led:   RGB LED GPIO: -1[0m
+[15:50:28] [0;32mI (1670) led:   LED brightness: 60[0m
+[15:50:28] [0;32mI (1680) led: Starting in STANDBY state[0m
+[15:50:28] [0;32mI (1680) led: LED state change: 0 -> 0[0m
+[15:50:28] [0;32mI (1690) led: LED subsystem initialized[0m
+[15:50:28] [0;32mI (1690) main: Board: ESP32-S3 Generic[0m
+[15:50:28] [0;32mI (1690) ESP32S3-Generic: Display I2C bus initialized: sda=39, scl=38[0m
+[15:50:28] [0;32mI (1710) ESP32S3-Generic: Display I2C lines idle-high (SDA=1 SCL=1) — OK[0m
+[15:50:28] [0;32mI (1710) ESP32S3-Generic: Generic board initialized[0m
+[15:50:28] [0;32mI (1710) display: Initializing OLED display (I2C: SDA=39 SCL=38 addr=0x3c)[0m
+[15:50:28] [0;32mI (1720) display: Display responded at 0x3c (attempt 1)[0m
+[15:50:28] [0;32mI (2060) display: OLED display initialized[0m
+[15:50:28] [0;32mI (2060) aht20: AHT20 已启用: sda=9 scl=15 addr=0x38 100kHz 周期=5000 ms[0m
+[15:50:28] [0;32mI (2060) pp: pp rom version: e7ae62f[0m
+[15:50:28] [0;32mI (2060) net80211: net80211 rom version: e7ae62f[0m
+[15:50:28] I (2080) wifi:wifi driver task: 3fcbe974, prio:23, stack:6656, core=0
+[15:50:28] I (2090) wifi:wifi firmware version: b9f67df
+[15:50:28] I (2090) wifi:wifi certification version: v7.0
+[15:50:28] I (2090) wifi:config NVS flash: enabled
+[15:50:28] I (2090) wifi:config nano formatting: disabled
+[15:50:28] I (2090) wifi:Init data frame dynamic rx buffer num: 32
+[15:50:28] I (2100) wifi:Init static rx mgmt buffer num: 5
+[15:50:28] I (2100) wifi:Init management short buffer num: 32
+[15:50:28] I (2110) wifi:Init dynamic tx buffer num: 32
+[15:50:28] I (2110) wifi:Init static tx FG buffer num: 2
+[15:50:28] I (2110) wifi:Init static rx buffer size: 1600
+[15:50:28] I (2120) wifi:Init static rx buffer num: 10
+[15:50:28] I (2120) wifi:Init dynamic rx buffer num: 32
+[15:50:28] [0;32mI (2130) wifi_init: rx ba win: 6[0m
+[15:50:28] [0;32mI (2130) wifi_init: accept mbox: 6[0m
+[15:50:28] [0;32mI (2130) wifi_init: tcpip mbox: 32[0m
+[15:50:28] [0;32mI (2140) wifi_init: udp mbox: 64[0m
+[15:50:28] [0;32mI (2140) wifi_init: tcp mbox: 6[0m
+[15:50:28] [0;32mI (2140) wifi_init: tcp tx win: 5760[0m
+[15:50:28] [0;32mI (2150) wifi_init: tcp rx win: 5760[0m
+[15:50:28] [0;32mI (2150) wifi_init: tcp mss: 1440[0m
+[15:50:28] [0;32mI (2160) wifi_init: WiFi IRAM OP enabled[0m
+[15:50:28] [0;32mI (2160) wifi_init: WiFi RX IRAM OP enabled[0m
+[15:50:28] I (2170) wifi:Set ps type: 0, coexist: 0
+[15:50:28] [0;32mI (2170) wifi: Hostname set to: ESP32-AirPlay[0m
+[15:50:28] [0;32mI (2180) phy_init: phy_version 712,87e8c20e,Apr 13 2026,18:51:10[0m
+[15:50:28] I (2240) wifi:mode : sta (02:00:00:00:00:01) + softAP (02:00:00:00:00:02)
+[15:50:28] I (2240) wifi:enable tsf
+[15:50:28] I (2240) wifi:Total power save buffer number: 16
+[15:50:28] I (2240) wifi:Init max length of beacon: 752/752
+[15:50:28] I (2240) wifi:Init max length of beacon: 752/752
+[15:50:28] [0;32mI (2250) wifi: AP+STA mode started: AP SSID=ESP32-AirPlay-Setup[0m
+[15:50:28] [0;32mI (2250) wifi: AP started[0m
+[15:50:28] [0;32mI (2260) esp_netif_lwip: DHCP server started on interface WIFI_AP_DEF with IP: 192.0.2.1[0m
+[15:50:28] [0;32mI (2260) wifi: Connecting to WiFi: <HOME_SSID>[0m
+[15:50:29] [0;32mI (2500) aht20: AHT20 就绪 (sda=9 scl=15 addr=0x38): 31.7 °C / 52.3 %RH[0m
+[15:50:31] [0;32mI (5150) wifi: Found 1 APs for SSID '<HOME_SSID>', best: 02:00:00:00:00:03 (rssi=-38, ch=7)[0m
+[15:50:31] I (5180) wifi:ap channel adjust o:1,1 n:7,2
+[15:50:31] I (5190) wifi:new:<7,0>, old:<1,1>, ap:<7,2>, sta:<7,0>, prof:1, snd_ch_cfg:0x0
+[15:50:31] I (5190) wifi:state: init -> auth (0xb0)
+[15:50:32] I (5670) wifi:state: auth -> assoc (0x0)
+[15:50:32] I (5690) wifi:state: assoc -> run (0x10)
+[15:50:32] I (5700) wifi:connected with <HOME_SSID>, aid = 2, channel 7, BW20, bssid = 02:00:00:00:00:03
+[15:50:32] I (5700) wifi:security: WPA3-SAE H2E, phy: bgn, rssi: -36, cipher(pairwise:0x3, group:0x3), pmf:1
+[15:50:32] I (5710) wifi:pm start, type: 0
+[15:50:32] I (5710) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us
+[15:50:32] I (5720) wifi:set rx beacon pti, rx_bcn_pti: 0, bcn_timeout: 25000, mt_pti: 0, mt_time: 10000
+[15:50:32] I (5740) wifi:<ba-add>idx:0 (ifx:0, 02:00:00:00:00:03), tid:5, ssn:0, winSize:64
+[15:50:32] I (5870) wifi:AP's beacon interval = 102400 us, DTIM period = 1
+[15:50:33] I (6540) wifi:<ba-add>idx:1 (ifx:0, 02:00:00:00:00:03), tid:0, ssn:0, winSize:64
+[15:50:35] [0;32mI (8920) wifi: Got IP: 192.0.2.5[0m
+[15:50:35] [0;32mI (8920) wifi: STA connected (AP 保持开启, 热点地址 192.0.2.1)[0m
+[15:50:35] [0;32mI (8920) esp_netif_handlers: sta ip: 192.0.2.5, mask: 255.255.255.0, gw: 192.0.2.1[0m
+[15:50:35] [0;32mI (8930) log_stream: Log streaming on /ws/logs[0m
+[15:50:35] [0;32mI (8930) web_server: Web server started on port 80 with captive portal support[0m
+[15:50:35] [0;32mI (8940) time_sync: SNTP 已启动: server=ntp.aliyun.com tz=CST-8（重同步间隔由 LWIP 决定）[0m
+[15:50:35] [0;32mI (8940) main: Starting AirPlay services...[0m
+[15:50:35] [0;32mI (8960) audio_buf: Sorted buffer created: 1000 slots × 1416 bytes = 1416000 bytes[0m
+[15:50:35] [0;32mI (8960) audio_output: I2S initialized: Rate=44100, DMA_Desc=8, DMA_Frame=256[0m
+[15:50:35] [0;32mI (8970) mdns_mem: mDNS task will be created from SPIRAM[0m
+[15:50:35] [0;32mI (8970) mdns_airplay: mDNS hostname: ESP32-AirPlay.local (device name: ESP32 AirPlay)[0m
+[15:50:35] [0;32mI (8980) rtsp_server: RTSP server listening on port 7000[0m
+[15:50:35] [0;32mI (8990) playback_ctrl: Source set to 1[0m
+[15:50:35] [0;32mI (8990) main: AirPlay ready[0m
+[15:50:35] [0;32mI (9000) main: Boot baseline: free heap 161907 internal (largest block 86016), 6047924 SPIRAM[0m
+[15:50:35] [0;32mI (9010) buttons: No buttons configured[0m
+[15:50:40] [0;32mI (13950) time_sync: NTP 同步完成: 2026-09-19 15:50:39 (tz=CST-8)[0m
+[15:51:53] === capture end, 11501 bytes, 0 reopens ===
