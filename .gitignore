@@ -19,8 +19,7 @@ __pycache__/
 # Hundreds of MB and it carries the real AP credential — never publish it.
 /firmware_backup/
 
-# 项目完整总结.md 是本地工程日志（SSID/IP/MAC/个人路径都在里面，且它是私人笔记）。
-# 由 2026-09-19 的决定：只留本地，不发布。
+# 个人工程日志（私人笔记，里面常有 SSID/IP/MAC/绝对路径）—— 不发布。
 /项目完整总结.md
 
 # Documentation site output
